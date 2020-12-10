@@ -1,0 +1,63 @@
+* {
+    background-color: #E43A3A;
+}
+
+#homepage {
+    font-family: 'Padauk', sans-serif;
+}
+
+header {
+    margin-top: 84px;
+    margin-left: 108px;
+}
+
+h1 {
+    font-size: 92px;
+    margin: 0px;
+}
+
+.circle {
+    margin-top: 70px;
+}
+
+.categories {
+    margin-top: 110px;
+    font-size: 50px;
+}
+
+a.category {
+    color: black;
+}
+
+    a.category:hover {
+        font-weight: bold;
+        color: black;
+    }
+
+footer {
+    margin-top: 100px;
+    margin-left: 108px;
+}
+
+a.email {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 28px;
+    color: black;
+}
+
+    a.email:hover {
+        color:  #E43A3A;
+        background-color: black;
+    }
+
+a.social {
+    text-decoration: none;
+    font-size: 28px;
+    color:black;
+}   
+
+    a.social:hover {
+        text-decoration: underline;
+        font-weight: normal;
+    }
