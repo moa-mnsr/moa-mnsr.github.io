@@ -6,23 +6,23 @@
     font-family: 'Padauk', sans-serif;
 }
 
-header {
-    margin-top: 84px;
-    margin-left: 108px;
+body {
+    margin-top: 3%;
+    margin-left: 5%;
 }
 
 h1 {
-    font-size: 92px;
+    font-size: 5.2em;
     margin: 0px;
 }
 
 .circle {
-    margin-top: 70px;
+    margin-top: 3%;
 }
 
 .categories {
-    margin-top: 110px;
-    font-size: 50px;
+    margin-top: 5%;
+    font-size: 3em;
 }
 
 a.category {
@@ -35,14 +35,13 @@ a.category {
     }
 
 footer {
-    margin-top: 100px;
-    margin-left: 108px;
+    margin-top: 4.5%;
 }
 
 a.email {
     text-decoration: none;
     font-weight: bold;
-    font-size: 28px;
+    font-size: 1.6em;
     color: black;
 }
 
@@ -53,7 +52,7 @@ a.email {
 
 a.social {
     text-decoration: none;
-    font-size: 28px;
+    font-size: 1.6em;
     color:black;
 }   
 
