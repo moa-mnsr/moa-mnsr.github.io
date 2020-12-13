@@ -1,62 +1,148 @@
-* {
-    background-color: #E43A3A;
+#index {
+  background-color: #E43A3A;
+  font-family: "Padauk", sans-serif
 }
 
-#homepage {
-    font-family: 'Padauk', sans-serif;
+#places {
+  background-color: #E43A3A;
+  font-family: "Padauk", sans-serif
+}
+
+.icon {
+  width:  13em;
+  height: 13em;
+}
+
+.expand-link {
+  display: inline-block;
+}
+.expand-link .icon-contract {
+  display: none;
+}
+.expand-link:hover .icon-expand,
+.expand-link:active .icon-expand {
+  display: none;
+}
+.expand-link:hover .icon-contract,
+.expand-link:active .icon-contract {
+  display: block;
 }
 
 body {
-    margin-top: 3%;
-    margin-left: 5%;
+  margin-top: 3%;
+  margin-left: 7%;
 }
 
-h1 {
-    font-size: 5.2em;
-    margin: 0px;
+h1.index {
+  font-size: 3em;
+  margin: 0px;
+}
+
+h1.page {
+  font-size: 3em;
+  margin: 0px;
+}
+
+h2.page {
+  font-size: 2em;
+  margin-top: 3%;
+  font-weight: normal;
+}
+
+.colon {
+  font-weight: lighter;
+  font-size: 1em;
 }
 
 .circle {
-    margin-top: 3%;
+  margin-top: 4%;
 }
 
 .categories {
-    margin-top: 5%;
-    font-size: 3em;
+  margin-top: 6%;
+  font-size: 2em;
 }
 
 a.category {
-    color: black;
+  color: black;
 }
 
-    a.category:hover {
-        font-weight: bold;
-        color: black;
-    }
+a.category:hover {
+  font-weight: bold;
+  color: black;
+}
 
 footer {
-    margin-top: 4.5%;
+  margin-top: 6%;
 }
 
 a.email {
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.6em;
-    color: black;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1em;
+  color: black;
 }
 
-    a.email:hover {
-        color:  #E43A3A;
-        background-color: black;
-    }
+a.email:hover {
+  color: #E43A3A;
+  background-color: black;
+}
 
 a.social {
-    text-decoration: none;
-    font-size: 1.6em;
-    color:black;
-}   
+  text-decoration: none;
+  font-size: 1em;
+  color: black;
+}
 
-    a.social:hover {
-        text-decoration: underline;
-        font-weight: normal;
-    }
+a.social:hover {
+  text-decoration: underline;
+  font-weight: normal;
+}
+
+.worldmap {
+  margin-top: 4%;
+  padding-left: .5em;
+
+}
+
+.map {
+  width: 20em;
+}
+
+.expand-link {
+  display: inline-block;
+}
+.expand-link .map-contract {
+  display: none;
+}
+.expand-link:hover .map-expand,
+.expand-link:active .map-expand {
+  display: none;
+}
+.expand-link:hover .map-contract,
+.expand-link:active .map-contract {
+  display: block;
+}
+
+.navbar {
+  margin-top: 4%;
+  font-size: 1.5em;
+}
+
+
+.location {
+  /*font-weight: bold;*/
+  text-decoration: underline;
+}
+
+/*
+a.button {
+  color: black;
+  text-decoration: none;
+}
+
+a.button:hover {
+  color: black;
+  text-decoration: underline;
+}
+*/
