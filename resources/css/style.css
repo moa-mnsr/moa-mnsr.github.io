@@ -40,9 +40,10 @@ h1.index {
 
 h1.page {
   font-size: 3em;
-  margin: 0px;
+  margin-top: 0em;
+  margin-bottom: 0em;
 }
-
+ /*
 h2.page {
   font-size: 2em;
   margin-top: 3%;
@@ -53,7 +54,7 @@ h2.page {
   font-weight: lighter;
   font-size: 1em;
 }
-
+*/
 .circle {
   margin-top: 4%;
 }
@@ -124,15 +125,67 @@ a.social:hover {
   display: block;
 }
 
+section.placelist {
+  margin-top: 1.5em;
+}
+
+ul {
+  margin-top: .5em;
+}
+
+/*
+
 .navbar {
-  margin-top: 4%;
+  font-size: 1em;
+}
+
+.location {
+  font-weight: bold;
+  text-decoration: underline;
+  display: none;
+}
+*/
+
+details >summary.group {
+  list-style: none;
+  margin-bottom: .75em;
   font-size: 1.5em;
 }
 
+details >summary.region {
+  margin-left: .5em;
+}
 
-.location {
-  /*font-weight: bold;*/
+ul >li.subregion {
+  margin-left: .8em;
+  color: white;
+}
+
+ul >li>span {
+  color:black;
+}
+
+sub.years {
+  color: #E43A3A;
+  background-color:black;
+  margin: 1.75em;
+}
+
+details >summary.origins {
+  list-style: none;
+  text-decoration: none;
+  margin-bottom: 1em;
+  font-weight: bold;
+}
+
+/*
+div.origins {
   text-decoration: underline;
+  font-size: 1.1em;
+}
+*/
+p.description {
+  font-size: .95em;
 }
 
 /*
