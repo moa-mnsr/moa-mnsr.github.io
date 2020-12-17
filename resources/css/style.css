@@ -1,12 +1,30 @@
 #index {
   background-color: #E43A3A;
-  font-family: "Padauk", sans-serif
+  font-family: "Padauk", sans-serif;
 }
 
 #places {
   background-color: #E43A3A;
   font-family: "Padauk", sans-serif
 }
+
+#patterns {
+  background-color: #E43A3A;
+  font-family: "Padauk", sans-serif
+}
+
+#sequence {
+  background-color: #E43A3A;
+  font-family: "Padauk", sans-serif
+}
+
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    max-height: 70px;
+    align-items: start;
+  }
 
 .icon {
   width:  13em;
@@ -40,9 +58,16 @@ h1.index {
 
 h1.page {
   font-size: 3em;
-  margin: 0px;
+  margin-top: 0em;
+  margin-bottom: 0em;
 }
 
+a.page {
+    text-decoration: none;
+    color: black;
+}
+
+ /*
 h2.page {
   font-size: 2em;
   margin-top: 3%;
@@ -53,7 +78,7 @@ h2.page {
   font-weight: lighter;
   font-size: 1em;
 }
-
+*/
 .circle {
   margin-top: 4%;
 }
@@ -73,7 +98,8 @@ a.category:hover {
 }
 
 footer {
-  margin-top: 6%;
+  margin-top: 3em;
+  margin-bottom: 2em;
 }
 
 a.email {
@@ -102,7 +128,6 @@ a.social:hover {
 .worldmap {
   margin-top: 4%;
   padding-left: .5em;
-
 }
 
 .map {
@@ -124,15 +149,68 @@ a.social:hover {
   display: block;
 }
 
-.navbar {
-  margin-top: 4%;
-  font-size: 1.5em;
+section.placelist {
+  margin-top: 1.5em;
 }
 
+ul {
+  margin-top: .5em;
+}
+
+/*
+
+.navbar {
+  font-size: 1em;
+}
 
 .location {
-  /*font-weight: bold;*/
+  font-weight: bold;
   text-decoration: underline;
+  display: none;
+}
+*/
+
+details >summary.group {
+  list-style: none;
+  text-decoration: underline;
+  margin-bottom: .75em;
+  font-size: 1.2em;
+}
+
+details >summary.region {
+  margin-left: .5em;
+}
+
+ul >li.subregion {
+  margin-left: .8em;
+  color: white;
+}
+
+ul >li>span {
+  color:black;
+}
+
+sub.years {
+  color: #E43A3A;
+  background-color:black;
+  margin: 1.75em;
+}
+
+details >summary.origins {
+  list-style: none;
+  text-decoration: none;
+  margin-bottom: 1em;
+  font-weight: bold;
+}
+
+/*
+div.origins {
+  text-decoration: underline;
+  font-size: 1.1em;
+}
+*/
+p.description {
+  font-size: .95em;
 }
 
 /*
