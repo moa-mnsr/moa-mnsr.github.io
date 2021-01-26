@@ -22,8 +22,8 @@
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
-    max-height: 70px;
-    align-items: start;
+    justify-content: flex-end;
+    /*max-height: 70px;*/
   }
 
 .icon {
@@ -48,7 +48,8 @@
 
 body {
   margin-top: 3%;
-  margin-left: 7%;
+  margin-left: 5%;
+  /*margin: 2em 0 2em 3em;;*/
 }
 
 h1.index {
@@ -80,11 +81,11 @@ h2.page {
 }
 */
 .circle {
-  margin-top: 4%;
+  margin-top: 3em;
 }
 
 .categories {
-  margin-top: 6%;
+  margin-top: 2em;
   font-size: 2em;
 }
 
@@ -98,8 +99,7 @@ a.category:hover {
 }
 
 footer {
-  margin-top: 3em;
-  margin-bottom: 2em;
+  margin-top: 4em;
 }
 
 a.email {
