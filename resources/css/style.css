@@ -7,12 +7,17 @@ body {
 }
 
 nav.container {
-    position: fixed;
+    padding: 3em 5em;
+    border-right: 1px solid #050505;
+  }
+
+  div.split-screen {
     display: flex;
-    justify-content: flex-start;   
-    flex-wrap: nowrap;
-    flex-direction: column;
-    margin: 3em 5em;
+  }
+
+  main {
+    height: 100vh;
+    padding: 4.75em 6em;
   }
 
   h1 {
