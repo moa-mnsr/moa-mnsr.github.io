@@ -1,20 +1,20 @@
 body {
   background-color: #E43A3A;
   font-family: "Padauk", sans-serif;
-  height: 100vh;
   margin: 0;
+  height: 100vh;
   color: #050505;
 }
 
 nav.container {
-    padding: 3.5em 8em 5em 8em;
-    height: 50em;
+    padding: 3.5em 8em 0 8em;
+    height: 25em;
     width: 15.4em;
     flex-shrink: 0;
   }
 
 div.wrapper {
-  position: fixed;
+  position: fixed;n
 }
 
   h1 {
