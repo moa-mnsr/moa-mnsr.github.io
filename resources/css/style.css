@@ -7,18 +7,15 @@ body {
 }
 
 nav.container {
-    padding: 3em 5em;
-    border-right: 1px solid #050505;
+    padding: 3.5em 8em 5em 8em;
+    height: 50em;
+    width: 15.4em;
+    flex-shrink: 0;
   }
 
-  div.split-screen {
-    display: flex;
-  }
-
-  main {
-    height: 100vh;
-    padding: 4.75em 6em;
-  }
+div.wrapper {
+  position: fixed;
+}
 
   h1 {
     letter-spacing: 0.03em;
@@ -37,108 +34,192 @@ svg {
     margin-top: 3.2em;
   }
   
-.icon {
-  width:  13em;
-  height: 13em;
+  .icon {
+    width:  13em;
+    height: 13em;
+  }
+  
+  .expand-link {
+    display: inline-block;
+  }
+  
+  .expand-link .icon-contract {
+    display: none;
+  }
+  
+  .expand-link:hover .icon-expand,
+  .expand-link:active .icon-expand {
+    display: none;
+  }
+  
+  .expand-link:hover .icon-contract,
+  .expand-link:active .icon-contract {
+    display: block;
+  }
+  
+  
+  
+  /* subpage links */
+  
+  section.categories {
+    font-size: 2em;
+    letter-spacing: 0.03em;
+    line-height: 1.5em;
+    margin-top: 2em;
+  }
+  
+  a {
+    color: #050505;
+    text-decoration: none;
+  }
+  
+  a.category {
+    cursor: crosshair;
+    border-bottom: solid 1.75px;
+  }
+  
+  a.category:hover {
+    font-weight: bold;
+  }
+  
+  
+  /* footer */
+  
+  
+  footer {
+    margin-top: 4.5em;
+    letter-spacing: .02em;
+  }
+  
+  a.email {
+    font-weight: bold;
+    font-size: 1em;
+    cursor: help;
+  }
+  
+  a.email:hover {
+    color: #E43A3A;
+    background-color: #050505;
+  }
+  
+  a.social {
+    font-size: 1em;
+    cursor: crosshair;
+    
+  }
+  
+  a.social:hover {
+    font-weight: normal;
+    border-bottom: solid 1px;
+  }
+  
+  span.socials {
+    margin: 0 .5em;
+  }
+  
+  /* main subpages */
+  
+  
+  div.split-screen {
+    display: flex;
   }
 
-.expand-link {
-  display: inline-block;
+  div.open-space {
+    height: 2.1em;
+    position: absolute;
   }
 
-.expand-link .icon-contract {
-  display: none;
+  main {
+    background: purple;
+    border-left: 1px solid #050505;
+    margin: 0 auto;
+    width: 100%;
+    padding: 4.75em 6em 0 6em;
+   
   }
+  
+  
+  div.subpage {
+    padding-left: .9em;
+  }
+  
+  .you-are-here {
+    font-size: 22px;
+    letter-spacing: .4em;
+    position: absolute;
+  }
+  
+  a.go-home {
+    text-decoration: none;
+    cursor: context-menu;
+  }
+  
+  /* subpage: art */
+  
 
-.expand-link:hover .icon-expand,
-.expand-link:active .icon-expand {
-  display: none;
+.grid-container {
+  margin-top: 650px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-row-gap: 50px;
+  grid-column-gap: 30px;
+  position: relative;
+  z-index: 1;
 }
 
-.expand-link:hover .icon-contract,
-.expand-link:active .icon-contract {
-  display: block;
+div.cell {
+  margin: 0 auto;
+  width: 400px;
+  height: 200px;
+  border: 1px solid #050505;
+
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+  padding: 1px;
 }
 
-
-
-/* subpage links */
-
-section.categories {
-  margin-top: 2.1em;
-  font-size: 2em;
-  letter-spacing: 0.03em;
-  line-height: 1.5em;
-
+.cell-1 {
+  background: deepskyblue;
+}
+.cell-2 {
+  background: orangered;
+}
+.cell-3 {
+  background: royalblue;
+}
+.cell-4 {
+  background: gold;
+}
+.cell-5 {
+  background: blueviolet;
+}
+.cell-6 {
+  background: limegreen;
+}
+.cell-7 {
+  background: coral;
+}
+.cell-8 {
+  background: lightseagreen;
+}
+.cell-9 {
+  background: maroon;
 }
 
-a {
-  color: #050505;
-  text-decoration: none;
-}
+div.display-box {
+  left: 50%;
+  position: fixed;
+  z-index: 2;
 
-a.category {
-  cursor: crosshair;
-  border-bottom: solid 1.75px;
-}
+  width: 500px;
+  height: 600px;
 
-a.category:hover {
-  font-weight: bold;
-}
-
-
-/* footer */
-
-
-footer {
-  margin-top: 4.5em;
-  letter-spacing: .02em;
-}
-
-a.email {
-  font-weight: bold;
-  font-size: 1em;
-  cursor: help;
-}
-
-a.email:hover {
-  color: #E43A3A;
-  background-color: #050505;
-}
-
-a.social {
-  font-size: 1em;
-  cursor: crosshair;
-
-}
-
-a.social:hover {
-  font-weight: normal;
-  border-bottom: solid 1px;
-}
-
-span.socials {
-  margin: 0 .5em;
-}
-
-/* main subpages: art & work */
-
-
-
-
-div.subpage {
-  padding-left: .9em;
-}
-
-.you-are-here {
-  font-size: 22px;
-  letter-spacing: .4em;
-  position: absolute;
-}
-
-a.go-home {
-  text-decoration: none;
-  cursor: context-menu;
+  background: #E43A3A;
+  border: 1px solid #050505;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 
