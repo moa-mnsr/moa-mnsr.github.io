@@ -1,14 +1,16 @@
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
 body {
   background-color: #E43A3A;
   font-family: "Padauk", sans-serif;
-  margin: 0;
-  height: 100vh;
   color: #050505;
 }
 
 nav.container {
-    padding: 3.5em 8em 0 8em;
-    height: 25em;
+    padding: 3.5em 8em;
     width: 15.4em;
     flex-shrink: 0;
   }
@@ -124,23 +126,24 @@ svg {
   
   div.split-screen {
     display: flex;
-  }
-
-  div.open-space {
-    height: 2.1em;
-    position: absolute;
+    width: 100vw;
+    height: 100%;
+    min-height: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    /*overflow-y: hidden;*/
   }
 
   main {
     border-left: 1px solid #050505;
     margin: 0 auto;
     width: 100%;
-    padding: 4.75em 6em 0 6em;
-   
+    padding: 4.75em 6em;
+    overflow-y: scroll;
   }
   
-  main.work {
-    height: 100vh;
+  main.work, main.subpage-map {
+    padding-top: 6em;
   }
   
   div.subpage {
@@ -166,11 +169,6 @@ svg {
     margin: 0;
     
   }
-
- /*
-  h1.go-home:hover {
-    border-bottom: thick double #050505;
-  }*/
   
   .dropdown {
     position: relative;
@@ -222,18 +220,28 @@ svg {
     border-bottom: thick double #050505;
 
   }
+
   /* subpage: art */
   
+  div.open-space {
+    height: 2.1em;
+    position: absolute;
+  }
+
 .art-content-box {
-  margin: 100px 0 100% 0;
+  margin: 100px 0 0 0;
+}
+
+div.art-content-box details {
+  margin-top: 35px;
+  border-top: 1px solid #050505;
 }
 
 div.art-content-box summary.section-head {
   padding-left: 1px;
   padding-top: 5px;
  
-  border-top: 1px solid #050505;
-  margin: 35px 25px 25px 0;
+  margin: 3px 25px 25px 0;
   text-transform: uppercase;
   /*font-variant-caps: all-small-caps;*/
   letter-spacing: 1.1px;
@@ -255,7 +263,6 @@ div.art-content-box summary.section-head {
 }
 
 .grid-container.tabs.short {
-  grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
 }
 
@@ -336,6 +343,7 @@ div.tab:hover {
 */
 
 div.display-box {
+  padding: 20px 0;
   left: 50%;
   top: 10%;
   position: fixed;
@@ -344,23 +352,57 @@ div.display-box {
   width: 500px;
   height: 600px;
 
-  background: #E43A3A;
+  background-color: #E43A3A;
   border: 1px solid #050505;
   box-sizing: border-box;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 
-/* about - map */fwhite
+/* subpage: about 
+
+.grid-about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-row-gap: 2px;
+  grid-column-gap: 2px;
+  position: relative;
+  z-index: 1;
+}
+
+.about-cell {
+  border: 1px solid #050505;
+  padding: 4em;
+}
+
+ map 
 
 
-.worldmap {
-  margin-top: 4%;
-  padding-left: .5em;
+
+
+
+*/
+
+main.subpage-map {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+section.worldmap {
+ /*height: 481px;*/
+ padding-top: 2em;
+  position: relative;
+ 
 }
 
 .map {
-  width: 20em;
+  /*border: 1px solid #050505;*/
+  width: 525px;
 }
 
 .expand-link {
