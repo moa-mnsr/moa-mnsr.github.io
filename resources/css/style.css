@@ -436,7 +436,7 @@ figcaption {
   width: 650px;
 }
 
-a.expand-link {
+main.subpage-map a.expand-link{
   cursor: vertical-text;
 }
 .expand-link {
