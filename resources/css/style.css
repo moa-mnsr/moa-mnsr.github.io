@@ -142,9 +142,11 @@ svg {
     overflow-y: scroll;
   }
   
-  main.work, main.subpage-map {
+  main.work {
     padding-top: 6em;
   }
+  
+ 
   
   div.subpage {
     padding-left: .9em;
@@ -379,8 +381,6 @@ div.display-box {
   padding: 4em;
 }
 
- map 
-
 
 
 
@@ -389,22 +389,56 @@ div.display-box {
 
 main.subpage-map {
   display: flex;
+  flex-direction: column;
+  align-content: center;  
+    padding-top: 4em;
+  } 
+
+
+main.subpage-map section {
+  display: flex;
   width: 100%;
   justify-content: center;
 }
+ 
+/*
+section.worldmap 
+{
+ 
+ background: yellowgreen;
 
-section.worldmap {
+}
+*/
+figure.worldmap {
+  padding: 50px 50px 45px 50px;
+  border: thick double  #050505;
+}
+
+
+figcaption {
+  font-style: italic;
+  border: 1px solid #050505;
+  margin-top: 5px;
+  padding: 15px 60px;
+  /*
+  background-color: #050505;
+  color:  #E43A3A;*/
+}
+
+ section.key { 
  /*height: 481px;*/
- padding-top: 2em;
   position: relative;
  
 }
 
 .map {
-  /*border: 1px solid #050505;*/
-  width: 525px;
+  
+  width: 650px;
 }
 
+a.expand-link {
+  cursor: vertical-text;
+}
 .expand-link {
   display: inline-block;
 }
