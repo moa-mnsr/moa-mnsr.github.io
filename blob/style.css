@@ -1,28 +1,33 @@
 body {
     margin: 0;
-    color: #F3F2F2;
-    background-color: #1C1817;
-    font-family: "Padauk", sans-serif;
+    color: #FFBFA8;
+    background-color: #050505;
+    font-family: Karrik, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
   }
   
  
  
   h1.index {
+    font-weight: 400;
     font-size: 3em;
-    margin: 0px;
-    letter-spacing: .03em;
-    line-height: .9;
+    margin: 0 0 10px 0;
+    letter-spacing: 2px;
+    color: #A8FFF9;
   }
 
   .intro {
+    color: #E8FFA8;
      margin: 3.75em 0;
-     color: #F3F2F2;
+    line-height: 30px;
+     letter-spacing: .3px;
   }
 
   main {
-    margin-top: 1.25em;
+    margin-top: 50px;
     margin-left: 3em;
-    width: 15em;
+    width: 25px;
   }
 
   div.dot {
@@ -31,19 +36,15 @@ body {
     margin-left: 1.5em;
   }
 
-  p {
-      color: #D6C2C9;
-    }
 
 /* CSS for blob hover effect */
 
 svg {
-  color: #F3F2F2;
+  color: #FFBFA8;
 }
 
 .icon {
-    width:  13em;
-    height: 13em;
+    width:  200px;
   }
   
   .expand-link {
@@ -124,4 +125,10 @@ a:hover {
 div.blob-page {
   margin: 1em 0;
   padding: 3.5em 8em;
+}
+
+@font-face {
+  font-family: "Karrik";
+  src: url("/resources/font/WOFF2/Karrik-Regular.woff2") format("woff2"),
+       url("/resources/font/WOFF/Karrik-Regular.woff") format("woff");
 }

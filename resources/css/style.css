@@ -1,30 +1,37 @@
 body, html {
-  height: 100%;
+  font-size: 20px;
+  font-weight: 400;
   margin: 0;
 }
 
 body {
-  background-color: #E43A3A;
-  font-family: "Padauk", sans-serif;
+  background-color: #FFBFA8;
+  font-family: Karrik, sans-serif;
   color: #050505;
 }
 
 nav.container {
-    padding: 3.5em 8em;
-    width: 15.4em;
-    flex-shrink: 0;
-  }
+ padding: 30px 40px;
 
-div.wrapper {
-  position: fixed;
-  margin: 1em 0;
 }
 
+
   h1 {
-    letter-spacing: 0.03em;
+    line-height: .75em;
+    font-size: 96px;
+    letter-spacing: 1px;
+    font-style: normal;
+    text-transform: capitalize;
+    font-weight: 400;
+    cursor: default;
+    margin: 0;
+    padding: 25px 25px 15px 25px;
+  }
+
+    /*letter-spacing: 0.03em;
     font-size: 3em;
     line-height: .9;
-    /*border-bottom: thick double #E43A3A;*/
+    border-bottom: thick double #FF6666;*/
   }
 
 
@@ -34,13 +41,12 @@ svg {
   color: #050505;
 }
 
-.circle {
-    margin-top: 4em;
+div.circle {
+    padding: 40px 40px 40px 25px;
   }
   
   .icon {
-    width:  13em;
-    height: 13em;
+    width:  200px;
   }
   
   .expand-link {
@@ -65,13 +71,15 @@ svg {
   /* subpage links */
   
   section.categories {
-    font-size: 2em;
-    letter-spacing: 0.03em;
-    line-height: 1.5em;
-    margin-top: 2em;
+   
+    font-size: 64px;
+    letter-spacing: 3px;
+    line-height: 71px;
+    padding: 8px 25px 0 25px;
   }
   
   a {
+    padding: 0;
     color: #050505;
     text-decoration: none;
   }
@@ -83,31 +91,48 @@ svg {
   }
   
   a.category:hover {
-    font-weight: bold;
+    border: none;
+    text-transform: uppercase;
+    color: #A8FFF9;
+    background-color: #050505;
+  }
+
+
+  a.category.link-2:hover {
+    color: #D4D4D4;
+  }
+
+  a.category.link-3:hover {
+    color: #E8FFA8;
   }
   
+ 
+
+  a.category.link-4:hover {
+    color: #FF7D4E;
+  }
   
   /* footer */
   
   
   footer {
-    margin-top: 4.5em;
+    margin-top: 50px;
     letter-spacing: .02em;
   }
   
   a.email {
-    font-weight: bold;
-    font-size: 1em;
+    font-size: 32px;
     cursor: help;
   }
   
   a.email:hover {
-    color: #E43A3A;
+    color: #FF6666;
     background-color: #050505;
   }
   
   a.social {
-    font-size: 1em;
+    font-style: italic;
+    font-size: 28px;
     cursor: crosshair;
     
   }
@@ -169,12 +194,11 @@ svg {
     cursor: context-menu;
     padding: 0;
     margin: 0;
-    
   }
   
   .dropdown {
     position: relative;
-    border-bottom: thick double #E43A3A;
+    border-bottom: thick double #FF6666;
     }
 
   .dropdown-content {
@@ -209,7 +233,7 @@ svg {
 
   .dropdown-content a:hover {
     background-color:  #050505;
-    color: #E43A3A;
+    color: #FF6666;
     font-weight: 700;
   }
 
@@ -298,7 +322,7 @@ div.tab {
   padding: 18px 25px;
 
   background-color: rgba(0, 0, 0, 0.85);
-  color:  #E43A3A;
+  color:  #FF6666;
 }
 
 div.tab.right {
@@ -354,7 +378,7 @@ div.display-box {
   width: 500px;
   height: 600px;
 
-  background-color: #E43A3A;
+  background-color: #FF6666;
   border: 1px solid #050505;
   box-sizing: border-box;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -422,7 +446,7 @@ figcaption {
   padding: 15px 60px;
   /*
   background-color: #050505;
-  color:  #E43A3A;*/
+  color:  #FF6666;*/
 }
 
  section.key { 
@@ -454,5 +478,38 @@ main.subpage-map a.expand-link{
   display: block;
 }
 
+
+
+h2 {
+  margin-top: 0; 
+  padding-bottom: 20px; 
+  border-bottom: 1px solid #050505;
+}
+
+h2 span {
+  text-decoration: none;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Karrik";
+  src: url("/resources/font/WOFF2/Karrik-Regular.woff2") format("woff2"),
+       url("/resources/font/WOFF/Karrik-Regular.woff") format("woff");
+}
+
+/*
+@font-face {
+  font-family: Karrik;
+  src: url("font/Karrik-Regular.ttf") format("opentype"),url("/resources/font/WOFF2/Karrik-Regular.woff2"), format("woff2");
+  /*font-weight:400;
+  font-style: normal;
+}
+ 
+@font-face { 
+  font-family: Karrik;
+  src:url("font/Karrik-italic.ttf") format("opentype"),url("/resources/font/WOFF2/Karrik-Italic.woff2") format("woff2");/*
+  font-weight: 400; 
+  font-style: italic;*/
+}/*
 
 
