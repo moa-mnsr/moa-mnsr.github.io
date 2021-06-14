@@ -1,52 +1,93 @@
 body, html {
-  font-size: 20px;
-  font-weight: 400;
-  margin: 0;
+  font-family: Karrik, sans-serif;
+  color: #050505;
+  background-color: #FFBFA8;
 }
 
 body {
-  background-color: #FFBFA8;
-  font-family: Karrik, sans-serif;
-  color: #050505;
+  letter-spacing: -1;
+  font-size: 20px;
+  font-weight: 400;
 }
 
-nav.container {
- padding: 30px 40px;
+#index {
+  margin: 4.5rem 0 0 7rem;
+}
+/*
+div.grid-wrapper {
+  display: flex;
+  align-items: start;
+  justify-content: left;
+  height: 100vh;
+  width: 100vw;
+}*/
 
+main.homepage {
+ 
+  display: grid;
+  grid-template-columns: repeat(12, 3.67rem);
+  grid-template-rows: auto 3rem repeat(4, 4.25rem);
+  column-gap: 1rem;
+  row-gap: 1rem;
 }
 
+#index img.logo {
+  width: 55rem;
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+}
 
-  h1 {
-    line-height: .75em;
-    font-size: 96px;
-    letter-spacing: 1px;
-    font-style: normal;
-    text-transform: capitalize;
-    font-weight: 400;
-    cursor: default;
-    margin: 0;
-    padding: 25px 25px 15px 25px;
-  }
+#places {
+  margin: 4.75rem auto 10rem auto;
+  width: 80%;
+}
 
-    /*letter-spacing: 0.03em;
-    font-size: 3em;
-    line-height: .9;
-    border-bottom: thick double #FF6666;*/
-  }
+#places header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  flex: 1;
+}
+
+#places a {
+  width: 10rem;
+}
+
+#places div.circle {
+  padding: 0;
+}
+
+#places nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+a.end-link {
+  padding-left: .1rem;
+}
 
 
   /* blob */
+
+
+  div.circle {
+    grid-row: 3;
+    margin: 0;
+    padding-left: .6rem;
+  }
 
 svg {
   color: #050505;
 }
 
-div.circle {
-    padding: 40px 40px 40px 25px;
-  }
   
   .icon {
-    width:  200px;
+    width: 26rem;
+  }
+
+  #places .icon {
+    width: 3rem;
   }
   
   .expand-link {
@@ -70,12 +111,14 @@ div.circle {
   
   /* subpage links */
   
-  section.categories {
-   
-    font-size: 64px;
-    letter-spacing: 3px;
-    line-height: 71px;
-    padding: 8px 25px 0 25px;
+  nav.categories {
+    grid-column-start: 8;
+    grid-row-start: 3;
+    font-size: 6.25rem;
+    letter-spacing: -1;
+    line-height: 6.75rem;
+    padding: .5rem 0 0 0;
+
   }
   
   a {
@@ -87,7 +130,6 @@ div.circle {
   a.category {
     cursor: crosshair;
     border-bottom: solid 1.75px;
-    margin-bottom: 0px;
   }
   
   a.category:hover {
@@ -112,7 +154,7 @@ div.circle {
     color: #FF7D4E;
   }
   
-  /* footer */
+  /* footer 
   
   
   footer {
@@ -146,7 +188,6 @@ div.circle {
     margin: 0 .5em;
   }
   
-  /* main subpages */
   
   
   div.split-screen {
@@ -156,16 +197,8 @@ div.circle {
     min-height: 100%;
     box-sizing: border-box;
     overflow-x: hidden;
-    /*overflow-y: hidden;*/
-  }
+    /*overflow-y: hidden;
 
-  main {
-    border-left: 1px solid #050505;
-    margin: 0 auto;
-    width: 100%;
-    padding: 4.75em 6em;
-    overflow-y: scroll;
-  }
   
   main.work {
     padding-top: 6em;
@@ -211,7 +244,7 @@ div.circle {
   }
 
   .dropdown-content a.menu {
-    /*padding-left: 20px;*/
+    padding-left: 20px;
     font-size: 17px;
     margin: 0;
     padding-left: 15px;
@@ -222,7 +255,7 @@ div.circle {
     border-bottom: 1px solid #050505;
     /*border-right: 1px solid #050505;
     border-left: 1px solid #050505;
-    border-top: 1px solid #050505;*/
+    border-top: 1px solid #050505;
 
   }
 
@@ -247,12 +280,13 @@ div.circle {
 
   }
 
-  /* subpage: art */
+ 
   
   div.open-space {
     height: 2.1em;
     position: absolute;
   }
+  */
 
 .art-content-box {
   margin: 100px 0 0 0;
@@ -436,17 +470,16 @@ section.worldmap
 figure.worldmap {
   padding: 50px 50px 45px 50px;
   border: thick double  #050505;
+  background-color: #D09886;
 }
 
 
 figcaption {
   font-style: italic;
-  border: 1px solid #050505;
+  /*border: 1px solid #050505;
   margin-top: 5px;
   padding: 15px 60px;
-  /*
-  background-color: #050505;
-  color:  #FF6666;*/
+  background-color: #FF936C;*/
 }
 
  section.key { 
@@ -461,7 +494,7 @@ figcaption {
 }
 
 main.subpage-map a.expand-link{
-  cursor: vertical-text;
+  cursor: default;
 }
 .expand-link {
   display: inline-block;
