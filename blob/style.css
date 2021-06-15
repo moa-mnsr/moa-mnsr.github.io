@@ -1,7 +1,7 @@
 body {
     margin: 0;
-    color: #FFBFA8;
-    background-color: #050505;
+    color: #F5F5F5;
+    background-color: #0A0A0A;
     font-family: Karrik, sans-serif;
     font-size: 20px;
     font-weight: 400;
@@ -14,14 +14,14 @@ body {
     font-size: 3em;
     margin: 0 0 10px 0;
     letter-spacing: 2px;
-    color: #A8FFF9;
+    
   }
 
   .intro {
-    color: #E8FFA8;
-     margin: 3.75em 0;
-    line-height: 30px;
-     letter-spacing: .3px;
+     margin: 3.75em 0 0 0;
+    line-height: 2rem;
+     letter-spacing: -1;
+     
   }
 
   main {
@@ -31,7 +31,6 @@ body {
   }
 
   div.dot {
-    color: #D1C7CA;
     font-size: 36px;
     margin-left: 1.5em;
   }
@@ -40,7 +39,7 @@ body {
 /* CSS for blob hover effect */
 
 svg {
-  color: #FFBFA8;
+  color: #F5F5F5;
 }
 
 .icon {
