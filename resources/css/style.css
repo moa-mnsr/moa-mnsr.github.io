@@ -4,12 +4,49 @@ body, html {
   background-color: #FFBFA8;
 }
 
+@font-face {
+  font-family: "Karrik";
+  src: url("/resources/font/WOFF2/Karrik-Regular.woff2") format("woff2"),
+       url("/resources/font/WOFF/Karrik-Regular.woff") format("woff");
+}
+
 body {
   letter-spacing: -1;
-  font-size: 20px;
   font-weight: 400;
   margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
 }
+
+a {
+  padding: 0;
+  color: #050505;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #F5F5F5;
+}
+
+a.category {
+  cursor: crosshair;
+  border-bottom: solid 1.75px;
+}
+
+a.category:hover, a.sub-link:hover {
+  border: none;
+  text-transform: uppercase;
+  background-color: #050505;
+}
+
+
+
+
+
+
+/* Homepage */
+
 
 #index {
   margin: 4.5rem 0 0 7rem;
@@ -24,7 +61,6 @@ div.grid-wrapper {
 }*/
 
 main.homepage {
- 
   display: grid;
   grid-template-columns: repeat(12, 3.67rem);
   grid-template-rows: auto 3rem repeat(4, 4.25rem);
@@ -38,12 +74,24 @@ main.homepage {
   grid-row: 1 / 2;
 }
 
-#places header {
+
+
+
+
+/* Subpage Header & Nav */
+
+
+
+body.subpage header {
  width: 100%;
  border-bottom: solid 1px #050505;
+ position: -webkit-sticky;
+ position: sticky;
+ top: 0px;
+ background-color: #FFBFA8;
 }
 
-#places nav {
+body.subpage nav {
   display: flex;
   align-items: center;
   box-sizing: border-box;
@@ -52,21 +100,136 @@ main.homepage {
   justify-content: space-between;
 }
 
-#places h1 {
-  margin-top: 27rem;
-  margin-bottom: 6rem;
-  font-size: 12rem;
-  font-weight:  400;
+a.contact:hover {
+  color: #F5F5F5;
+  cursor: help;
 }
 
-#places h1 span {
-  padding-right: 1.25rem;
+span.you-are-here, span.you-are-here:hover {
+  visibility: hidden;
+  background-color: #FFBFA8;
 }
 
-#places div.circle {
+span#you-are-here, span.you-are-here {
+    padding-right: 2px;
+}
+
+a#current-subpage {
+  text-transform: uppercase;
+}
+
+a#current-subpage:hover {
+  background: none;
+  color: #050505;
+}
+
+#current-subpage span#you-are-here {
+  visibility: visible;
+}
+
+
+span#you-are-here, a.sub-link#current-subpage:hover {
+  background-color: #FFBFA8;
+  /*border-bottom: thick double;*/
+  cursor: default;
+  color: #050505;
+  position: relative;
+}
+
+a.sub-link:hover {
+  cursor: crosshair;
+  color: #FFBFA8;
+}
+
+
+
+#first {
+  display: flex;
+  justify-content: center;
+  display: -webkit-box;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: end;
+  align-items: flex-end;
+}
+
+
+#second {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#second {
+  margin: 2.5rem;
+}
+
+  
+
+
+
+#second h2 {
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: 5rem;
+}
+
+div.dividing-unicode {
+  font-size: 7rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+
+section.page-title h1{
+  font-size: 9.5rem;
+  line-height: 9.5rem;
+  letter-spacing: -.3rem;
+  font-weight: 400;
+}
+
+section.page-title {
+  min-height: 100vh;
+}
+
+.center {
+  text-align: center;
+}
+
+
+h1#places-heading, h2#places-sub-heading {
+  font-size: 7.5em;
+  line-height: 7.5rem;
+  letter-spacing: -.17rem;
+  font-weight: 400;
+  width: 5rem;
+}
+
+
+section#places-sub-heading {
+  font-size: 7.5em;
+  line-height: 7.5rem;
+  letter-spacing: -.17rem;
+  font-weight: 400;
+}
+
+
+
+
+body.subpage div.circle {
   padding: 0;
   margin: 0;
   width: 3.5rem;
+}
+
+body.subpage header svg:hover {
+  color: #F5F5F5;
+}
+
+body.subpage .icon {
+  width: 2.5rem;
 }
 
 div.left-links {
@@ -82,13 +245,13 @@ section.subpages {
 }
 
 section.subpages div {
-  width: 3.5rem;
-  margin-right: 4rem;
+  width: 8rem;
+  margin: 0;
+  font-size: 2rem;
 }
 
 div.end-link {
   margin-right: 0;
-  width
 }
 
 section.subpages a {
@@ -102,10 +265,6 @@ svg.nav-img {
 
 svg.nav-img:hover {
   color: #F5F5F5;
-}
-
-#places .icon {
-  width: 2.5rem;
 }
 
 .nav-logo {
@@ -125,7 +284,7 @@ a.contact {
 }
 
 
-  /* blob */
+  /* circle & blob */
 
 
   div.circle {
@@ -137,17 +296,10 @@ a.contact {
 svg {
   color: #050505;
 }
-
-#places header svg:hover {
-  color: #F5F5F5;
-}
-
   
   .icon {
     width: 26rem;
   }
-
-  
   
   .expand-link {
     display: inline-block;
@@ -179,94 +331,52 @@ svg {
     padding: .5rem 0 0 0;
 
   }
-  
-  a {
-    padding: 0;
-    color: #050505;
-    text-decoration: none;
-  }
-  
-  a.contact:hover {
-    color: #F5F5F5;
-    cursor: help;
-  }
-
-  a.category {
-    cursor: crosshair;
-    border-bottom: solid 1.75px;
-  }
-  
-  a:hover {
-    color: #F5F5F5;
-  }
-
-  a.category:hover, a.sub-link:hover {
-    border: none;
-    text-transform: uppercase;
-    background-color: #050505;
-  }
-
-  a.sub-link span.you-are-here, a.sub-link span.you-are-here:hover {
-    text-transform: uppercase;
-    background-color: #FFBFA8;
-    /*border-bottom: thick double;*/
-    cursor: default;
-    color: #050505;
-    position: relative;
-  }
-
-  a.sub-link:hover {
-    cursor: crosshair;
-    color: #FFBFA8;
-  }
+ 
 
 h2 {
   font-size: 2.5rem;
+  font-weight: 400;
 }
 
-main.subpage-map {
+body.subpage main {
+  padding: 4rem 3rem;
+  font: inherit;
+}
+
+main.all-subpages {
   display: flex;
   flex-direction: column;
   justify-content: center; 
   } 
 
+main#work-subpage {
+  margin: 0 4rem;
+  padding: 0;
+}
 
-main.subpage-map section {
+main.work-subpage section.work-subheading h2{
+  margin-top: 0;
+  font-size: 4rem;
+  text-align: center;
+  width: 70rem;
+}
+
+main.all-subpages section {
   display: flex;
   justify-content: center;
   align-content: center;
 }
 
-figure.worldmap {
-  padding: 0 50px 45px 50px;
-  margin-bottom: 2rem;
-  /*background-color: #D09886;
- 
-
-
-  border-top: thick double;
-
-  border-right: solid 1px;
-  border-left: solid 1px;*/
+section.worldmap {
+  display: flex;
+  justify-content: center;
 }
 
-
-figcaption {
-  font-style: italic;
-  font-size: 2rem;
-  margin: 0 0 1rem 2rem;
-}
-
-figcaption span {
-  font-style: normal;
-  padding-right: .75rem;
-}
 
 .map {
-  width: 60rem;
-  margin-bottom: 2rem;
+  height: 80vh;
   margin-left: 2rem;
-  padding-right: 2rem;
+  padding: 1rem 2rem 0 1rem;
 }
 
 main.subpage-map a.expand-link{
@@ -287,19 +397,142 @@ main.subpage-map a.expand-link{
   display: block;
 }
 
-
-
-
-
 h2 span {
   text-decoration: none;
   font-weight: 500;
 }
 
-@font-face {
-  font-family: "Karrik";
-  src: url("/resources/font/WOFF2/Karrik-Regular.woff2") format("woff2"),
-       url("/resources/font/WOFF/Karrik-Regular.woff") format("woff");
+section#map-caption {
+  width: 100%;
+  padding: 5rem 0 5rem 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+figcaption {
+  font-size: 1.25rem;
+  font-family: 'Source Code Pro', monospace;
+  letter-spacing: -2;
+  font-weight: 400;
+}
+
+figcaption span {
+  padding: 0 2px;  margin-right: .5rem;
+}
+
+.languages-bullet li, .mediums-bullet li {
+  margin-bottom: 0px;
+  font-family: 'Source Code Pro', monospace;
 }
 
 
+.languages-bullet li:before {
+  content: "⚞";
+}
+
+.mediums-bullet li:before {
+  content: "◰";
+}
+
+ul.pieces {
+  margin-top: 0;
+}
+ul.pieces li:before {
+  content: "⟶";
+}
+
+ul.pieces li {
+  font-family: 'Source Code Pro', monospace;  
+  margin-left: 0;
+  font-size: 1.25rem;
+}
+
+ul.pieces li a {
+  text-decoration: underline dotted;
+  line-height: 3rem;
+}
+
+
+ul.pieces li:before {
+  color: #050505;
+  font-weight: 400;
+  display: inline-block;
+  margin-left: -2.25em;
+  margin-right: 1em;
+  list-style: none;
+
+}
+.languages-bullet li:before, .mediums-bullet li:before {
+   color: #050505;
+   font-weight: 400;
+   display: inline-block;
+   width: 1em;
+   margin-left: -1em;
+   list-style: none;
+}
+
+ul.languages-bullet, ul.mediums-bullet, ul.pieces {
+   list-style: none;
+}
+
+#third {
+  padding: 2rem 3rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 10rem;
+  border-top: dashed 1px #050505;
+  background-color: #FFBFA8;
+  flex-direction: column;
+ }
+
+div.construction-box {
+  display: flex;
+  font-family: 'Source Code Pro', monospace;  
+  justify-content: center;
+  margin-top: 3rem;
+  
+  text-align: center;
+}
+
+div.construction-box div {
+  border: dotted 1px;
+  padding: 5rem 7rem;
+}
+
+div.comm {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  text-align: center;
+  font-style: italic;
+}
+
+div#art{
+ padding: 3rem 0 2rem 0;
+}
+
+div.comm a {
+  border-bottom: dotted 2px;
+}
+
+div.comm a:hover {
+  background-color: #050505;
+  border-bottom: none;
+}
+
+div.work-content {
+  margin: 3rem;
+}
+
+#publications {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+#publications h4 {
+  margin-top: 5rem;
+  font-size: 2rem;
+  line-height: .25;
+}
