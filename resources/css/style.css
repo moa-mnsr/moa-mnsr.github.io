@@ -49,8 +49,11 @@ a.category:hover, a.sub-link:hover {
 
 
 #index {
-  margin: 4.5rem 0 0 7rem;
+  position: absolute;
+  top: 4.5rem;
+  left: 7rem;
 }
+
 /*
 div.grid-wrapper {
   display: flex;
