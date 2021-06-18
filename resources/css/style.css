@@ -502,6 +502,7 @@ div.comm {
   margin-top: 2rem;
   text-align: center;
   font-style: italic;
+  padding: 3rem 0 2rem 0;
 }
 
 div#art{
@@ -534,3 +535,10 @@ div.work-content {
   font-size: 2rem;
   line-height: .25;
 }
+
+body.subpage footer {
+  border-top: solid 1px #050505;
+  padding: 1rem;
+  background-color: #FFBFA8;
+ }
+
