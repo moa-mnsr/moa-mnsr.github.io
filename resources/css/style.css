@@ -11,7 +11,6 @@ body, html {
 }
 
 body {
-  letter-spacing: -1;
   font-weight: 400;
   margin: 0;
   padding: 0;
@@ -100,7 +99,7 @@ body.subpage nav {
 
 a.contact:hover {
   color: #F5F5F5;
-  cursor: help;
+  cursor: url(/resources/hexagon.svg), auto;
 }
 
 span.you-are-here, span.you-are-here:hover {
@@ -533,7 +532,9 @@ div.work-content {
 #publications h4 {
   margin-top: 5rem;
   font-size: 2rem;
-  line-height: .25;
+  padding-bottom: .5rem;
+  font-weight: 400;
+  letter-spacing: -.1rem;
 }
 
 body.subpage footer {
