@@ -72,11 +72,54 @@ main.homepage {
 }
 
 
+/* circle & blob */
 
 
+div.circle {
+  grid-row: 3;
+  margin: 0;
+  padding-left: .6rem;
+}
 
-/* Subpage Header & Nav */
+svg {
+color: #050505;
+}
 
+.icon {
+  width: 25rem;
+}
+
+.expand-link {
+  display: inline-block;
+}
+
+.expand-link .icon-contract {
+  display: none;
+}
+
+.expand-link:hover .icon-expand,
+.expand-link:active .icon-expand {
+  display: none;
+}
+
+.expand-link:hover .icon-contract,
+.expand-link:active .icon-contract {
+  display: block;
+}
+
+ /* links to subpages */
+  
+ nav.categories {
+  grid-column-start: 8;
+  grid-row-start: 3;
+  font-size: 6.25rem;
+  letter-spacing: -1;
+  line-height: 6.75rem;
+  padding: .5rem 0 0 0;
+
+}
+
+/* Subpage Header & Nav*/
 
 
 body.subpage header {
@@ -138,9 +181,10 @@ a.sub-link:hover {
   color: #FFBFA8;
 }
 
+/* Sub-Page Content */
 
 
-#first {
+section#first {
   display: flex;
   justify-content: center;
   display: -webkit-box;
@@ -151,21 +195,16 @@ a.sub-link:hover {
 }
 
 
-#second {
+section#second {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-}
-
-#second {
   margin: 2.5rem;
 }
 
+
   
-
-
-
-#second h2 {
+section#second h2 {
   font-size: 4rem;
   font-weight: 400;
   line-height: 5rem;
@@ -204,15 +243,12 @@ h1#places-heading, h2#places-sub-heading {
   width: 5rem;
 }
 
-
 section#places-sub-heading {
   font-size: 7.5em;
   line-height: 7.5rem;
   letter-spacing: -.17rem;
   font-weight: 400;
 }
-
-
 
 
 body.subpage div.circle {
@@ -233,7 +269,6 @@ div.left-links {
   display: flex;
   align-items: center;
 }
-
 
 section.subpages {
   display: flex;
@@ -280,54 +315,6 @@ a.contact {
   letter-spacing: 1;
 }
 
-
-  /* circle & blob */
-
-
-  div.circle {
-    grid-row: 3;
-    margin: 0;
-    padding-left: .6rem;
-  }
-
-svg {
-  color: #050505;
-}
-  
-  .icon {
-    width: 25rem;
-  }
-  
-  .expand-link {
-    display: inline-block;
-  }
-  
-  .expand-link .icon-contract {
-    display: none;
-  }
-  
-  .expand-link:hover .icon-expand,
-  .expand-link:active .icon-expand {
-    display: none;
-  }
-  
-  .expand-link:hover .icon-contract,
-  .expand-link:active .icon-contract {
-    display: block;
-  }
-  
-  
-  /* subpage links */
-  
-  nav.categories {
-    grid-column-start: 8;
-    grid-row-start: 3;
-    font-size: 6.25rem;
-    letter-spacing: -1;
-    line-height: 6.75rem;
-    padding: .5rem 0 0 0;
-
-  }
  
 
 h2 {
@@ -363,6 +350,9 @@ main.all-subpages section {
   justify-content: center;
   align-content: center;
 }
+
+
+/* Places Sub-Page */
 
 section.worldmap {
   display: flex;
@@ -417,23 +407,240 @@ figcaption span {
   padding: 0 2px;  margin-right: .5rem;
 }
 
-.languages-bullet li, .mediums-bullet li {
-  margin-bottom: 0px;
-  font-family: 'Source Code Pro', monospace;
+/* Work & Art Sub-Page */
+
+#third {
+  padding: 2rem 3rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+  border-top: dashed 1px #050505;
+  background-color: #FFBFA8;
+  flex-direction: column;
+ }
+
+
+/* Work Subpage */
+
+div.work-content {
+  margin: 10rem;
+  width: 75rem;
+  border-bottom: solid 1px #050505;
+}
+
+div.work-content h4, div.work-content h5, div.work-content h6 {
+  font-weight: 400;
+}
+
+div.work-content details summary {
+  font-size: 1.5rem;
+  border-top: solid 1px #050505;
+  padding: 1rem 0;
+  font-weight: 400;
+}
+
+/* Work - Menu */
+
+div.flex-container {
+  display: flex;
+  justify-content: center;
+  margin: .75rem 0 2.25rem 0;
+}
+
+/* Work - Background */
+
+div.experience-grid {
+  display: grid;
+  padding: 2rem;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(2, 25rem);
+  grid-gap: 1rem;
+  justify-items: center;
+}
+
+div.experience {
+  border: solid 1px #050505;
+  text-align: center;
+  width: 25rem;
+  padding: 4rem 0;
+}
+
+div.current-grid {
+  display: grid;
+  padding: 2rem;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(2, 25rem);
+  grid-gap: 1rem;
+  justify-items: center;
+}
+
+div.current {
+  border: thick double #050505;
+  text-align: center;
+  width: 24.5rem;
+  padding: 1rem 0;
 }
 
 
-.languages-bullet li:before {
+div.current p span#arrow {
+  padding-right: .5rem;
+  font-style: normal;
+  font-size: larger;
+}
+
+div.current p span {
+  font-family: 'Source Code Pro', monospace;
+  font-style: italic;
+  font-size: 1rem;
+}
+
+div.current p a {
+  border-bottom: dotted 1px #050505;
+}
+
+div.experience p {
+  font-size: 1.1rem;
+  font-style: italic;
+}
+
+div.experience p, div.current p {
+  font-size: 1.1rem;
+}
+
+div.experience p span {
+  font-family: 'Source Code Pro', monospace;
+  font-style: italic;
+  padding-left: .5rem;
+  font-size: 1rem;
+}
+
+/* Work - Skills List */
+
+
+div.skills-grid {
+  display: grid;
+  padding: 2rem;
+  grid-template-rows: 15rem 1fr;
+  grid-template-columns: repeat(2, 25rem);
+  grid-gap: 1rem;
+  justify-items: center;
+}
+
+div.skill-item {
+  border: solid 1px #050505;
+  width: 25rem;
+}
+
+div.tall {
+  padding-bottom: 3rem;
+}
+
+div.skill-content {
+  padding: 2rem 3rem 0 2rem;
+}
+
+.bullet {
+  font-family: 'Source Code Pro', monospace;
+  list-style: none;
+}
+
+ul h5 {
+  margin: .75rem 0 .75rem 0;
+}
+
+
+.languages li:before {
   content: "⚞";
 }
 
-.mediums-bullet li:before {
+.multimedia li:before {
+  content: "▷";
+}
+
+.development li:before {
   content: "◰";
 }
 
-ul.pieces {
-  margin-top: 0;
+.design li:before {
+  content: "⌑";
 }
+
+.bullet li:before {
+  padding-right: .5rem;
+}
+
+.bullet li:before {
+   color: #050505;
+   font-weight: 400;
+   display: inline-block;
+   width: 1em;
+   margin-left: -1em;
+   list-style: none;
+}
+
+a#skill-link {
+  text-decoration: underline dotted #050505;
+}
+
+/* Under Construction section */
+
+div.construction-box {
+  display: flex;
+  font-family: 'Source Code Pro', monospace;  
+  justify-content: center;
+  margin: 3rem;
+  
+  text-align: center;
+}
+
+div.construction-box div {
+  border: dotted 1px;
+  padding: 5rem 7rem;
+}
+
+div.comm {
+  font-size: 1.5rem;
+  margin: 0;
+  text-align: center;
+  font-style: italic;
+}
+
+div.comm a {
+  border-bottom: dotted 2px;
+}
+
+div.comm a:hover {
+  background-color: #050505;
+  border-bottom: none;
+}
+
+
+/* Art Sub-Page */
+
+div#art{
+  margin: 7rem 7rem 5rem 7rem;
+ }
+
+#publications, #experience {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4rem;
+  padding: 1rem;
+}
+
+#publications h4, #experience h4 {
+  margin-top: 5rem;
+  font-size: 2rem;
+  padding-bottom: .5rem;
+  font-weight: 400;
+  letter-spacing: -.1rem;
+}
+
+
+ul.pieces {
+  margin: 0 0 0 .75rem;
+}
+
 ul.pieces li:before {
   content: "⟶";
 }
@@ -442,6 +649,7 @@ ul.pieces li {
   font-family: 'Source Code Pro', monospace;  
   margin-left: 0;
   font-size: 1.25rem;
+  list-style: none;
 }
 
 ul.pieces li a {
@@ -457,85 +665,9 @@ ul.pieces li:before {
   margin-left: -2.25em;
   margin-right: 1em;
   list-style: none;
-
-}
-.languages-bullet li:before, .mediums-bullet li:before {
-   color: #050505;
-   font-weight: 400;
-   display: inline-block;
-   width: 1em;
-   margin-left: -1em;
-   list-style: none;
 }
 
-ul.languages-bullet, ul.mediums-bullet, ul.pieces {
-   list-style: none;
-}
-
-#third {
-  padding: 2rem 3rem;
-  display: flex;
-  justify-content: center;
-  margin-top: 10rem;
-  border-top: dashed 1px #050505;
-  background-color: #FFBFA8;
-  flex-direction: column;
- }
-
-div.construction-box {
-  display: flex;
-  font-family: 'Source Code Pro', monospace;  
-  justify-content: center;
-  margin-top: 3rem;
-  
-  text-align: center;
-}
-
-div.construction-box div {
-  border: dotted 1px;
-  padding: 5rem 7rem;
-}
-
-div.comm {
-  font-size: 1.5rem;
-  margin-top: 2rem;
-  text-align: center;
-  font-style: italic;
-  padding: 3rem 0 2rem 0;
-}
-
-div#art{
- padding: 3rem 0 2rem 0;
-}
-
-div.comm a {
-  border-bottom: dotted 2px;
-}
-
-div.comm a:hover {
-  background-color: #050505;
-  border-bottom: none;
-}
-
-div.work-content {
-  margin: 3rem;
-}
-
-#publications {
-  display: flex;
-  justify-content: center;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  padding: 1rem;
-}
-
-#publications h4 {
-  margin-top: 5rem;
-  font-size: 2rem;
-  padding-bottom: .5rem;
-  font-weight: 400;
-  letter-spacing: -.1rem;
-}
+  /* Sub-Pages Credits Footer */
 
 body.subpage footer {
   border-top: solid 1px #050505;
