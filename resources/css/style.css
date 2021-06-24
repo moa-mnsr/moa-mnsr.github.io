@@ -243,6 +243,10 @@ section.page-title h1{
   font-weight: 400;
 }
 
+h1 span.kerning {
+  letter-spacing: .2rem;
+}
+
 section.page-title {
   min-height: 100vh;
 }
