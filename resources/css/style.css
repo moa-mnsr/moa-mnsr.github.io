@@ -82,8 +82,25 @@ div.circle {
 }
 
 svg {
-color: #050505;
+  color: #050505;
 }
+
+div.arrows {
+    user-select: none; /* supported by Chrome and Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+div.arrows svg {
+  margin: 0 .5rem;
+}
+
+div.arrows svg:hover {
+  color: #FAFAFA;
+}
+
 
 .icon {
   width: 25rem;
@@ -401,7 +418,18 @@ figcaption {
   font-family: 'Source Code Pro', monospace;
   letter-spacing: -2;
   font-weight: 400;
+  width: 24.25rem;
+  text-align: center;
 }
+
+/*
+figcaption.homes {
+  text-align: right;
+}
+
+figcaption.origins {
+  text-align: left;
+}*/
 
 figcaption span {
   padding: 0 2px;  margin-right: .5rem;
