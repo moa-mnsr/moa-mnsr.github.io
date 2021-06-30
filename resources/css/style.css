@@ -1,13 +1,25 @@
-body, html {
-  font-family: Karrik, sans-serif;
-  color: #050505;
-  background-color: #FFBFA8;
+@font-face {
+  font-family: "Karrik";
+  src:  url("/resources/font/WOFF2/Karrik-Regular.woff2") format("woff2"),
+        url("/resources/font/WOFF/Karrik-Regular.woff") format("woff"),
+        url("/resources/font/TFF/Karrik-Regular.ttf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
 }
 
 @font-face {
   font-family: "Karrik";
-  src: url("/resources/font/WOFF2/Karrik-Regular.woff2") format("woff2"),
-       url("/resources/font/WOFF/Karrik-Regular.woff") format("woff");
+  src:  url("/resources/font/WOFF2/Karrik-Italic.woff2") format("woff2"),
+        url("/resources/font/WOFF/Karrik-Italic.woff") format("woff"),
+        url("/resources/font/TFF/Karrik-Italic.ttf") format("opentype");
+  font-weight:400;
+  font-style:italic;
+}
+
+body, html {
+  font-family: "Karrik";
+  color: #050505;
+  background-color: #FFBFA8;
 }
 
 body {
@@ -506,12 +518,17 @@ div.current-grid {
 }
 
 div.current {
-  border: thick double #050505;
+  border: solid 1px #050505;
   text-align: center;
   width: 24.5rem;
   padding: 1rem 0;
+  font-style: italic;
 }
 
+div#highlight {
+  border: thick double black;
+  font-style: normal;
+}
 
 div.current p span#arrow {
   padding-right: .5rem;
@@ -706,4 +723,3 @@ body.subpage footer {
   padding: 1rem;
   background-color: #FFBFA8;
  }
-
