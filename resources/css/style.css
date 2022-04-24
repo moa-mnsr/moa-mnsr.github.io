@@ -603,7 +603,7 @@ ul h5 {
 }
 
 .languages li:before {
-  content: "⚞";
+  content: "⫺";
 }
 
 .multimedia li:before {
