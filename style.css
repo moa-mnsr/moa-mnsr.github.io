@@ -1,4 +1,8 @@
-body {
-    background-color: darkslategrey;
-    color: ghostwhite;
+html {
+    background-color: #212427;
+    color: white;
+}
+
+a {
+    color: gold;
 }
