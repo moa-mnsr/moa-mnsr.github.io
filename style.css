@@ -3,6 +3,10 @@ html {
     color: white;
 }
 
-a {
+a, a:visited  {
     color: gold;
+}
+
+a:hover {
+    color: darkgoldenrod;
 }
