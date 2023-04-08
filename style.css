@@ -1,12 +1,130 @@
-html {
-    background-color: #212427;
-    color: white;
+@import url("/reset.css");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+    box-sizing: border-box;
 }
 
-a, a:visited  {
-    color: gold;
+body {
+  background-color: #002E2E;
+  color: #FFFEF0;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100vh;
+  align-content: center;
 }
 
-a:hover {
-    color: darkgoldenrod;
+body, section, header,
+main,
+nav,
+nav div.container,
+footer, footer div.container {
+  display: flex;
 }
+
+section:nth-child(1) {
+    justify-content: space-around;
+}
+
+section:nth-child(2) {
+    justify-content: space-evenly;
+}
+
+header {
+  font-family: "Fira Sans", sans-serif;
+}
+
+header {
+  font-weight: 400;
+  font-size: 2vh;
+  display: flex;
+}
+
+header div.title {
+  font-weight: 400;
+  font-size: 1.5em;
+  height: fit-content;
+}
+
+nav, footer {
+  justify-content: left;
+  font-family: "Fira Code", monospace;
+}
+
+nav div.container {
+  flex-direction: column;
+  justify-content: right;
+  border-top: solid 1px #FFFEF0;
+  border-right: solid 1px #FFFEF0;
+  border-left: solid 1px #FFFEF0;
+}
+
+nav {
+    height: fit-content;
+}
+
+nav div.item {
+  padding: 15px 10px 15px 60px;
+  justify-content: right;
+  text-align: right;
+  border-bottom: solid 1px #FFFEF0;
+}
+
+nav a, footer a {
+  font-size: 2vh;
+  text-decoration: none;
+  color: #FFFEF0;
+
+}
+
+nav a:hover {
+  background-color: #FFFEF0;
+  color: #002E2E;
+}
+
+img.circle {
+    width: 15em;
+    transition: transform .7s ease-in-out;
+}
+
+  img.circle:hover {
+    transform: rotate(360deg);
+  }
+
+  footer a:nth-child(1):hover {
+    text-decoration: none;
+    color: goldenrod;
+  }
+
+  footer a:nth-child(2):hover {
+    text-decoration: none;
+    color: tomato;
+  }
+
+  footer a:nth-child(3):hover {
+    text-decoration: none;
+    color: greenyellow;
+  }
+
+footer div.container {
+    flex-direction: column;
+  }
+
+  footer div.item {
+    padding: 15px 0 15px 60px;
+    justify-content: right;
+    text-align: right;
+    border-bottom: solid 1px #FFFEF0;
+
+  }
+
+  @media only screen and (max-width: 500px) {
+    section:nth-child(1) {
+      flex-direction: column;
+    }
+    section:nth-child(2) {
+        flex-direction: column-reverse;
+      }
+  }
+
