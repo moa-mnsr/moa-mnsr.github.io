@@ -83,6 +83,10 @@ nav a:hover {
   color: #002E2E;
 }
 
+footer a:hover {
+    color: silver;
+}
+
 img.circle {
     width: 15em;
     transition: transform .7s ease-in-out;
@@ -91,7 +95,7 @@ img.circle {
   img.circle:hover {
     transform: rotate(360deg);
   }
-
+/*
   footer a:nth-child(1):hover {
     text-decoration: none;
     color: goldenrod;
@@ -106,7 +110,7 @@ img.circle {
     text-decoration: none;
     color: slateblue;
   }
-
+*/
 footer div.container {
     flex-direction: column;
   }
