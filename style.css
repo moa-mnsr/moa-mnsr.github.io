@@ -84,7 +84,7 @@ nav a:hover {
 }
 
 footer a:hover {
-    color: silver;
+    color: whitesmoke;
 }
 
 img.circle {
@@ -116,9 +116,7 @@ footer div.container {
   }
 
   footer div.item {
-    padding: 15px 0 15px 60px;
-    justify-content: right;
-    text-align: right;
+    padding: 1em 2em 1em 0;
     border-bottom: solid 1px #FFFEF0;
 
   }
