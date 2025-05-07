@@ -1,0 +1,99 @@
+@import url("reset.css");
+@import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital,wght@0,300..700;1,300..700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+  background-color: #002E2E;
+  color: #FFFEF0;
+  font-family: "Inclusive Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  width: 100vw;
+
+  /* to see the container */
+  border: 1px solid red; 
+
+}
+
+header, main {
+ 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  /* to see the container */
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid orange; 
+
+}
+
+main {
+   /* to see the container */
+  height: 10em;
+}
+
+main section {
+   /* to see the container */
+  height: 5em;
+}
+
+section {
+   /* to see the container */
+  border: 1px solid yellow;
+  margin: 5px;
+  padding: 5px;
+}
+
+section.toggles {
+  display: flex;
+  justify-content: center;
+}
+
+div {
+  /* to see the container */
+  border: 1px solid greenyellow; 
+}
+
+div.svg-container {
+    width: 10vw; 
+ 
+     /* to see the container */
+    margin: 1px;
+    padding: 1px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+div.title {
+  
+  font-weight: 600;
+  text-align: center;
+  font-size: 13vw;
+
+   /* to see the container */
+  margin: 1px;
+  padding: 1px;
+  border: 1px solid greenyellow;
+}
+
+/* 
+
+// <weight>: Use a value from 300 to 700
+// <uniquifier>: Use a unique and descriptive class name
+
+.inclusive-sans-<uniquifier> {
+  font-family: "Inclusive Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+*/
