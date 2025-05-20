@@ -1,14 +1,22 @@
 @import url("reset.css");
 @import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital,wght@0,300..700;1,300..700&display=swap');
+@font-face {
+  font-family: 'whoismono';
+  src: url('fonts/whois-mono.eot');
+  src: url('fonts/whois-mono.woff') format('woff'),
+       url('fonts/whois-mono.ttf') format('truetype'),
+       url('fonts/whois-mono.svg#whoismono') format('svg');
+}
 
 * {
     box-sizing: border-box;
 }
 
+
 body {
   background-color: #002E2E;
   color: #FFFEF0;
-  font-family: "Inclusive Sans", sans-serif;
+  font-family: 'whoismono', monospace;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
