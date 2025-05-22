@@ -14,61 +14,123 @@
 
 
 body {
-  background-color: #002E2E;
-  color: #FFFEF0;
+  color: #151515;
+  background-color: #82845f; /* #a69166; /* #9e9f99; #B0B68F; */        
   font-family: 'whoismono', monospace;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  width: 100vw;
-
   /* to see the container */
-  border: 1px solid red; 
+
 
 }
 
-header, main {
- 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 
-  /* to see the container */
-  margin: 10px;
-  padding: 10px;
-  border: 1px solid orange; 
+details::selection  {
+    background-color: #151515;
+}
 
+span.block::selection {
+  background-color: #82845f;
+}
+
+span.strike::selection  {
+    text-decoration: none;
+    background-color: #82845f;
 }
 
 main {
-   /* to see the container */
-  height: 10em;
+  font-size: 6vw;
+  line-height: 1.5;
 }
 
-main section {
-   /* to see the container */
-  height: 5em;
+
+span.strike {
+  text-decoration: line-through;
 }
 
-section {
-   /* to see the container */
-  border: 1px solid yellow;
-  margin: 5px;
-  padding: 5px;
+span.strike:hover {
+  cursor: crosshair;
 }
+  
+ /*
+  color: #a69166;
+  padding: 0 5px;
+  border-bottom: 1px solid #7bb4a7;
+ 
+  */
+
+
+
+span.block {
+    background-color: #151515;
+    padding: 0;
+}
+
+
+main section  {
+  margin: 8em 3em;
+}
+
+main section div {
+    border-bottom: 1px solid #151515; 
+  padding: 5px 0;
+
+}
+
+main a {
+  text-decoration: none;
+   color: #151515;
+   padding: 2px;
+}
+
+main div a {
+  padding: 0px 1px;
+  background-color: #a6d4ca; /*#7bb4a7;*/
+}
+
+
+
+details {
+  padding: 3px 0;
+}
+
+details summary {
+  cursor: pointer;
+}
+
+/*
+details:hover {
+  cursor: pointer;
+  color: #151515;
+}
+
+main a:hover {
+  background-color: #151515;
+}
+
+span.block:hover {
+  background-color: #7bb4a7;
+  cursor: pointer;
+}
+  */
 
 section.toggles {
   display: flex;
   justify-content: center;
+  margin: 2em;
 }
 
+/*to see the container
 div {
-  /* to see the container */
   border: 1px solid greenyellow; 
 }
+   */
 
 div.svg-container {
-    width: 10vw; 
+    width: 2em; 
+    display: flex;
+    justify-content: center;
  
      /* to see the container */
     margin: 1px;
@@ -78,7 +140,12 @@ div.svg-container {
 img {
   width: 100%;
   height: auto;
+  margin: 0 1em;
 }
+
+/* not in use right now */
+
+/*
 
 div.title {
   
@@ -86,14 +153,15 @@ div.title {
   text-align: center;
   font-size: 13vw;
 
-   /* to see the container */
+to see the container
   margin: 1px;
   padding: 1px;
   border: 1px solid greenyellow;
 }
 
-/* 
+ */ 
 
+ /*
 // <weight>: Use a value from 300 to 700
 // <uniquifier>: Use a unique and descriptive class name
 
