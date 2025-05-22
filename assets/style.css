@@ -40,7 +40,7 @@ span.strike::selection  {
 }
 
 main {
-  font-size: 6vw;
+  font-size: 4vw;
   line-height: 1.5;
 }
 
@@ -69,7 +69,7 @@ span.block {
 
 
 main section  {
-  margin: 8em 3em;
+  margin: 2em 2em;
 }
 
 main section div {
