@@ -52,7 +52,7 @@ main section {
 
 main section div {
   border-bottom: 1px solid #101010;
-  padding: 5px 0;
+  padding: 10px 0;
 
 }
 
@@ -63,9 +63,14 @@ main a {
 }
 
 main div a {
-  padding: 3px 9px;
+  padding: 4px 10px;
   background-color: #a6d4ca;
+  border: 1.5px solid #101010;
   
+}
+
+main div a:hover {
+  background-color: whitesmoke;
 }
 
 /* earlier consideration for highlight color #7bb4a7;*/
@@ -96,6 +101,15 @@ details summary {
   cursor: pointer;
 }
 
+summary {
+  font-size: 1.2rem; /* can use any responsive unit */
+}
+
+summary::marker {
+  font-size: 1.2em; /* relative to summary's font size */
+}
+
+
 /* header */
 
 header {
@@ -115,6 +129,8 @@ div.svg-container {
 
   margin: 1px;
   padding: 1px;
+
+  cursor: pointer;
 }
 
 img {
@@ -130,6 +146,12 @@ img {
     margin: 0 4em;
     padding: 1em 0;
   }
+
+   /* test this: Fixed: summary should scale with main font size */
+  summary {
+    font-size: inherit; /* or 1.2rem to match main */
+  }
+}
 }
 
 @media (min-width: 750px) {
