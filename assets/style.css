@@ -1,6 +1,4 @@
 @import url("reset.css");
-@import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital,wght@0,300..700;1,300..700&display=swap');
-
 @font-face {
   font-family: 'whoismono';
   src: url('fonts/whois-mono.eot');
@@ -15,37 +13,64 @@
 
 
 body {
-  color: #151515;
-  background-color: #82845f;
-  /* #a69166; /* #9e9f99; #B0B68F; */
+  color: #101010;
+  background-color: #768853;
   font-family: 'whoismono', monospace;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  /* to see the container */
-
 
 }
+/* some earlier background-color options: #a69166; /* #9e9f99; #B0B68F; */
 
+/* selection styles */
 
 details::selection {
-  background-color: #151515;
+  background-color: #101010;
 }
 
 span.block::selection {
-  background-color: #82845f;
+  background-color: #768853;
 }
 
 span.strike::selection {
   text-decoration: none;
-  background-color: #82845f;
+  background-color: #768853;
 }
 
+/* main content */
+
 main {
-  font-size: 4vw;
+  font-size: 6vw;
   line-height: 1.5;
 }
 
+
+main section {
+  margin: 2em 2em;
+}
+
+main section div {
+  border-bottom: 1px solid #101010;
+  padding: 5px 0;
+
+}
+
+main a {
+  text-decoration: none;
+  color: #101010;
+  padding: 2px;
+}
+
+main div a {
+  padding: 3px 9px;
+  background-color: #a6d4ca;
+  
+}
+
+/* earlier consideration for highlight color #7bb4a7;*/
+
+/* text styles */
 
 span.strike {
   text-decoration: line-through;
@@ -55,44 +80,13 @@ span.strike:hover {
   cursor: crosshair;
 }
 
-/*
-  color: #a69166;
-  padding: 0 5px;
-  border-bottom: 1px solid #7bb4a7;
- 
-  */
-
-
-
 span.block {
-  background-color: #151515;
+  background-color: #101010;
   padding: 0;
 }
 
 
-main section {
-  margin: 2em 2em;
-}
-
-main section div {
-  border-bottom: 1px solid #151515;
-  padding: 5px 0;
-
-}
-
-main a {
-  text-decoration: none;
-  color: #151515;
-  padding: 2px;
-}
-
-main div a {
-  padding: 0px 1px;
-  background-color: #a6d4ca;
-  /*#7bb4a7;*/
-}
-
-
+/* details and summary */
 
 details {
   padding: 3px 0;
@@ -102,40 +96,23 @@ details summary {
   cursor: pointer;
 }
 
-/*
-details:hover {
-  cursor: pointer;
-  color: #151515;
-}
+/* header */
 
-main a:hover {
-  background-color: #151515;
+header {
+  padding: 1em 0;
 }
-
-span.block:hover {
-  background-color: #7bb4a7;
-  cursor: pointer;
-}
-  */
 
 section.toggles {
   display: flex;
   justify-content: center;
-  margin: 2em;
+  margin: 3em 0 1em 0;
 }
-
-/*to see the container
-div {
-  border: 1px solid greenyellow; 
-}
-   */
 
 div.svg-container {
   width: 44px;
   display: flex;
   justify-content: center;
 
-  /* to see the container */
   margin: 1px;
   padding: 1px;
 }
@@ -146,62 +123,36 @@ img {
   margin: 0 1em;
 }
 
+/* responsive for desktop from mobile design */
 @media (min-width: 450px) {
   main {
-    margin: 0 1em;
+    font-size: 1.2rem;
+    margin: 0 4em;
+    padding: 2em 0;
   }
 }
 
 @media (min-width: 750px) {
   main {
-    font-size: clamp(1.25rem, 3vw, 1.1rem);
+    font-size: 1.25rem;
     margin: 0 4em;
   }
 
   main section {
-    font-size: clamp(1.25rem, 3vw, 1.1rem);
     margin: 2em 0;
   }
 }
 
 @media (min-width: 950px) {
+  
+header {
+  margin: 1em 0;
+}  
   main {
-    margin: 0 30vw;
+    margin: 0 27vw;
   }
   main section {
     padding-bottom: 1em;
   }
 }
 
-
-/* not in use right now */
-
-
-/*
-
-div.title {
-  
-  font-weight: 600;
-  text-align: center;
-  font-size: 13vw;
-
-to see the container
-  margin: 1px;
-  padding: 1px;
-  border: 1px solid greenyellow;
-}
-
- */
-
-/*
-// <weight>: Use a value from 300 to 700
-// <uniquifier>: Use a unique and descriptive class name
-
-.inclusive-sans-<uniquifier> {
-  font-family: "Inclusive Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-}
-
-*/
