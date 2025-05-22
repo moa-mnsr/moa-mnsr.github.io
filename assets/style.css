@@ -1,21 +1,23 @@
 @import url("reset.css");
 @import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital,wght@0,300..700;1,300..700&display=swap');
+
 @font-face {
   font-family: 'whoismono';
   src: url('fonts/whois-mono.eot');
   src: url('fonts/whois-mono.woff') format('woff'),
-       url('fonts/whois-mono.ttf') format('truetype'),
-       url('fonts/whois-mono.svg#whoismono') format('svg');
+    url('fonts/whois-mono.ttf') format('truetype'),
+    url('fonts/whois-mono.svg#whoismono') format('svg');
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 
 body {
   color: #151515;
-  background-color: #82845f; /* #a69166; /* #9e9f99; #B0B68F; */        
+  background-color: #82845f;
+  /* #a69166; /* #9e9f99; #B0B68F; */
   font-family: 'whoismono', monospace;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -26,17 +28,17 @@ body {
 }
 
 
-details::selection  {
-    background-color: #151515;
+details::selection {
+  background-color: #151515;
 }
 
 span.block::selection {
   background-color: #82845f;
 }
 
-span.strike::selection  {
-    text-decoration: none;
-    background-color: #82845f;
+span.strike::selection {
+  text-decoration: none;
+  background-color: #82845f;
 }
 
 main {
@@ -52,8 +54,8 @@ span.strike {
 span.strike:hover {
   cursor: crosshair;
 }
-  
- /*
+
+/*
   color: #a69166;
   padding: 0 5px;
   border-bottom: 1px solid #7bb4a7;
@@ -63,30 +65,31 @@ span.strike:hover {
 
 
 span.block {
-    background-color: #151515;
-    padding: 0;
+  background-color: #151515;
+  padding: 0;
 }
 
 
-main section  {
+main section {
   margin: 2em 2em;
 }
 
 main section div {
-    border-bottom: 1px solid #151515; 
+  border-bottom: 1px solid #151515;
   padding: 5px 0;
 
 }
 
 main a {
   text-decoration: none;
-   color: #151515;
-   padding: 2px;
+  color: #151515;
+  padding: 2px;
 }
 
 main div a {
   padding: 0px 1px;
-  background-color: #a6d4ca; /*#7bb4a7;*/
+  background-color: #a6d4ca;
+  /*#7bb4a7;*/
 }
 
 
@@ -128,13 +131,13 @@ div {
    */
 
 div.svg-container {
-    width: 44px; 
-    display: flex;
-    justify-content: center;
- 
-     /* to see the container */
-    margin: 1px;
-    padding: 1px;
+  width: 44px;
+  display: flex;
+  justify-content: center;
+
+  /* to see the container */
+  margin: 1px;
+  padding: 1px;
 }
 
 img {
@@ -143,7 +146,36 @@ img {
   margin: 0 1em;
 }
 
+@media (min-width: 450px) {
+  main {
+    margin: 0 1em;
+  }
+}
+
+@media (min-width: 750px) {
+  main {
+    font-size: clamp(1.25rem, 3vw, 1.1rem);
+    margin: 0 4em;
+  }
+
+  main section {
+    font-size: clamp(1.25rem, 3vw, 1.1rem);
+    margin: 2em 0;
+  }
+}
+
+@media (min-width: 950px) {
+  main {
+    margin: 0 30vw;
+  }
+  main section {
+    padding-bottom: 1em;
+  }
+}
+
+
 /* not in use right now */
+
 
 /*
 
@@ -159,9 +191,9 @@ to see the container
   border: 1px solid greenyellow;
 }
 
- */ 
+ */
 
- /*
+/*
 // <weight>: Use a value from 300 to 700
 // <uniquifier>: Use a unique and descriptive class name
 
