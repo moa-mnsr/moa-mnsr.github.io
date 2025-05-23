@@ -83,7 +83,7 @@ span.arrow {
     top: 0px;
 */
 
-}
+
 span.strike {
   text-decoration: line-through;
 }
@@ -122,6 +122,17 @@ summary::marker {
 header {
   padding: 1em 0;
 }
+
+svg.circle {
+    width: 3.5em;
+    transition: transform .7s ease-in-out;
+    fill: #E1D0B8;
+}
+
+
+  svg.circle:hover {
+    transform: rotate(360deg);
+  }
 
 section.toggles {
   display: flex;
