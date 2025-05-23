@@ -77,6 +77,11 @@ main div a:hover {
 
 /* text styles */
 
+span.arrow {
+    position: relative;
+    top: -2px;
+
+}
 span.strike {
   text-decoration: line-through;
 }
