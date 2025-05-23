@@ -1,3 +1,8 @@
+possible arrows:
+
+↗
+⬀
+
 1.
 Dirt 
 https://dirt-fought.netlify.app/ 

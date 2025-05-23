@@ -77,9 +77,11 @@ main div a:hover {
 
 /* text styles */
 
+/* consideration ..
 span.arrow {
     position: relative;
-    top: -2px;
+    top: 0px;
+*/
 
 }
 span.strike {
