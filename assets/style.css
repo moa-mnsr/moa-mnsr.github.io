@@ -214,7 +214,7 @@ body#about main img {
 }
 
 body#about figcaption {
-  font-size: x-small;
+  font-size: small;
   margin: 1em 0;
   padding: 1em;
   border: 1px solid #101010;
@@ -229,10 +229,16 @@ body#about main section {
 body#about main  p {
   margin: 1em 0;
     font-size: 1rem;
+    line-height: 1.5;
 }
 
 a.in-text {
  border-bottom: 1.5px solid #101010;
+}
+
+a.in-text:hover {
+   border-bottom: 1.5px solid whitesmoke;
+   background-color:  whitesmoke;
 }
 
 a.in-text-dots {
@@ -240,13 +246,16 @@ a.in-text-dots {
 }
 
 a.in-text-dots:hover {
-  border-bottom: 1.5px dotted #a6d4ca;
-}
-
-a.in-text:hover {
-   border-bottom: 1.5px solid #a6d4ca;
+     border-bottom: 1.5px solid #a6d4ca;
+   background-color:  #a6d4ca;
 
 }
+
+footer {
+  margin: 7em;
+}
+
+
 
 /*
 body#about main {
