@@ -1,16 +1,19 @@
 @import url("reset.css");
+
 @font-face {
   font-family: 'whoismono';
   src: url('fonts/whois-mono.eot');
   src: url('fonts/whois-mono.woff') format('woff'),
-    url('fonts/whois-mono.ttf') format('truetype'),
-    url('fonts/whois-mono.svg#whoismono') format('svg');
+       url('fonts/whois-mono.ttf') format('truetype'),
+       url('fonts/whois-mono.svg#whoismono') format('svg');
 }
 
+/* ================================
+   BASE STYLES
+   ================================ */
 * {
   box-sizing: border-box;
 }
-
 
 body {
   color: #101010;
@@ -19,11 +22,11 @@ body {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-
 }
 
-/* selection styles */
-
+/* ================================
+   SELECTION STYLES
+   ================================ */
 details::selection {
   background-color: #101010;
 }
@@ -37,22 +40,57 @@ span.strike::selection {
   background-color: #768853;
 }
 
-/* main content */
+/* ================================
+   HEADER
+   ================================ */
+header {
+  padding: 1em 0 0 0;
+}
 
+.toggles {
+  display: flex;
+  justify-content: center;
+  margin: 4em 0 0 0;
+}
+
+.svg-container {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+svg.circle {
+  width: 3.5em;
+  transition: transform .7s ease-in-out;
+}
+
+svg.circle path {
+  fill: #E1D0B8;
+}
+
+svg.circle:hover {
+  transform: rotate(360deg);
+}
+
+svg.circle:hover path {
+  fill: #101010;
+}
+
+/* ================================
+   MAIN CONTENT
+   ================================ */
 main {
   font-size: 6vw;
   line-height: 1.5;
 }
 
-
 main section {
   margin: 2em 2em;
 }
 
-main section div.poem-title{
+main section div.poem-title {
   border-bottom: 1px solid #101010;
   padding: 10px 0;
-
 }
 
 main a {
@@ -65,19 +103,15 @@ main div a {
   padding: 4px 10px;
   background-color: #a6d4ca;
   border: 1.5px solid #101010;
-  
 }
 
 main div a:hover {
   background-color: whitesmoke;
 }
 
-
-/* text styles */
-
-
-
-
+/* ================================
+   TEXT STYLES
+   ================================ */
 span.strike {
   text-decoration: line-through;
 }
@@ -91,9 +125,9 @@ span.block {
   padding: 0;
 }
 
-
-/* details and summary */
-
+/* ================================
+   DETAILS AND SUMMARY
+   ================================ */
 details {
   padding: 3px 0;
 }
@@ -110,48 +144,9 @@ summary::marker {
   font-size: 1.2em; 
 }
 
-
-/* header */
-
-header {
-  padding: 1em 0 0 0;
-}
-
-svg.circle {
-    width: 3.5em;
-    transition: transform .7s ease-in-out;
-    
-}
-
-svg.circle path {
-  fill: #E1D0B8;
-}
-
-
-  svg.circle:hover {
-    transform: rotate(360deg);
-  }
-
-  svg.circle:hover path {
-    fill: #101010;
-  }
-
-
-
-section.toggles {
-  display: flex;
-  justify-content: center;
-  margin: 4em 0 0 0;
-}
-
-div.svg-container {
-  display: flex;
-  justify-content: center;
-  cursor: pointer;
-}
-
-/* responsive for desktop from mobile design */
-
+/* ================================
+   RESPONSIVE BREAKPOINTS
+   ================================ */
 @media (min-width: 450px) {
   main {
     font-size: 1.2rem;
@@ -163,9 +158,7 @@ div.svg-container {
     font-size: inherit; 
   }
 
-    body#about {
-    margin: 0 1em;
-}
+
 }
 
 @media (min-width: 750px) {
@@ -177,27 +170,30 @@ div.svg-container {
   main section {
     margin: 2em 0;
   }
-
-
+  
+  /* Slightly tighter line-height for larger screens */
+  main {
+    line-height: 1.4;
+  }
 }
 
 @media (min-width: 950px) {
+  header {
+    margin: 1em 0;
+  }  
   
-header {
-  margin: 1em 0;
-}  
   main {
-    margin: 0 27vw;
+    margin: 0 32vw;
   }
+  
   main section {
     padding-bottom: 1em;
   }
 }
 
-/* about page */
-
-
-
+/* ================================
+   ABOUT PAGE STYLES
+   ================================ */
 body#about section.top {
   margin-bottom: 2em;
 }
@@ -207,12 +203,11 @@ body#about div.symbol {
   margin: 2em 0 1em 0;
 }
 
-
 body#about svg.circle path {
   fill: transparent;
 }
 
- body#about svg.circle:hover path {
+body#about svg.circle:hover path {
   fill: #101010;
 } 
 
@@ -242,78 +237,62 @@ body#about figcaption {
   margin: 1em 0;
   padding: 1.5em 2em;
   border: 1.5px dotted #101010;
+  line-height: 1.4;
 }
 
 div.flex-box-wrapper {
   display: flex;
   flex-direction: column;
-
 }
 
 body#about main section {
   margin: 3em 2em;
-
 }
 
-body#about main  p {
+body#about main p {
   margin: 0 0 2em 0;
-    font-size: 1rem;
-    line-height: 1.5;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
+/* ================================
+   ABOUT PAGE LINKS
+   ================================ */
 a.in-text {
- border-bottom: 1.5px solid #101010;
+  border-bottom: 1.5px solid #101010;
 }
 
 a.in-text:hover {
   background-color: #101010;
   color: #768853;
-
 }
 
 a.in-text-dots {
- border-bottom: 1.5px dotted #101010;
+  border-bottom: 1.5px dotted #101010;
 }
 
 a.in-text-dots:hover {
-     border-bottom: 1.5px solid #101010;
+  border-bottom: 1.5px solid #101010;
 }
 
-
-footer {
-  margin: 7em;
-}
-
-
-
-
-/* Ensure figure elements don't add extra spacing */
-
-  body#about figure {
+/* ================================
+   ABOUT PAGE LAYOUT
+   ================================ */
+body#about figure {
   margin: 2em 0;
 }
-
 
 body#about figure img {
   margin-bottom: 0;
 }
 
 body#about section.acknowledgements p {
-  margin: 0 0 2em;  /* bottom margin only */
+  margin: 0 0 2em;
 }
 
 body#about section.contact iframe {
   display: block;
-  margin: 2em 0;    /* vertical gap and center on page */
-}
-
-@media (max-width: 600px) {
-  body#about section.contact iframe {
-    width: 100%;
-  }
-   body#about section.font-info img.font-poster {
-    width: 100%;
-  }
+  margin: 2em 0;
 }
 
 body#about section.font-info img.font-poster {
@@ -321,4 +300,24 @@ body#about section.font-info img.font-poster {
   width: 50%;
   max-width: 100%;
   margin: 2em 0;
+}
+
+/* ================================
+   MOBILE RESPONSIVE FIXES
+   ================================ */
+@media (max-width: 600px) {
+  body#about section.contact iframe {
+    width: 100%;
+  }
+  
+  body#about section.font-info img.font-poster {
+    width: 100%;
+  }
+}
+
+/* ================================
+   FOOTER
+   ================================ */
+footer {
+  margin: 7em;
 }
