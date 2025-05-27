@@ -21,7 +21,6 @@ body {
   font-style: normal;
 
 }
-/* some earlier background-color options: #a69166; /* #9e9f99; #B0B68F; */
 
 /* selection styles */
 
@@ -73,15 +72,10 @@ main div a:hover {
   background-color: whitesmoke;
 }
 
-/* earlier consideration for highlight color #7bb4a7;*/
 
 /* text styles */
 
-/* consideration ..
-span.arrow {
-    position: relative;
-    top: 0px;
-*/
+
 
 
 span.strike {
@@ -109,11 +103,11 @@ details summary {
 }
 
 summary {
-  font-size: 1.2rem; /* can use any responsive unit */
+  font-size: 1.2rem; 
 }
 
 summary::marker {
-  font-size: 1.2em; /* relative to summary's font size */
+  font-size: 1.2em; 
 }
 
 
@@ -157,17 +151,21 @@ div.svg-container {
 }
 
 /* responsive for desktop from mobile design */
+
 @media (min-width: 450px) {
   main {
     font-size: 1.2rem;
     margin: 0 4em;
     padding: 1em 0;
   }
-   /* test this: Fixed: summary should scale with main font size */
+
   summary {
-    font-size: inherit; /* or 1.2rem to match main */
+    font-size: inherit; 
   }
 
+    body#about {
+    margin: 0 1em;
+}
 }
 
 @media (min-width: 750px) {
@@ -198,6 +196,18 @@ header {
 
 /* about page */
 
+
+
+body#about section.top {
+  margin-bottom: 2em;
+}
+
+body#about div.symbol {
+  font-size: 1.5rem;
+  margin: 2em 0 1em 0;
+}
+
+
 body#about svg.circle path {
   fill: transparent;
 }
@@ -211,9 +221,9 @@ body#about h1 {
   margin: 1em 0 .5em 0;
   border-bottom: 1.5px solid #101010;
 }
+
 body#about h2 {
-  font-size: 1rem;
-  
+  font-size: 1rem;  
 }
 
 body#about div.flex-box-wrapper {
@@ -231,7 +241,7 @@ body#about figcaption {
   font-size: .9rem;
   margin: 1em 0;
   padding: 1.5em 2em;
-  border: 1px solid #101010;
+  border: 1.5px dotted #101010;
 }
 
 div.flex-box-wrapper {
@@ -241,12 +251,12 @@ div.flex-box-wrapper {
 }
 
 body#about main section {
-  margin: 1em 2em;
+  margin: 3em 2em;
 
 }
 
 body#about main  p {
-  margin: 1em 0 2em 0;
+  margin: 0 0 2em 0;
     font-size: 1rem;
     line-height: 1.5;
 }
@@ -269,26 +279,46 @@ a.in-text-dots:hover {
      border-bottom: 1.5px solid #101010;
 }
 
-section img.font-poster {
-    width: 50%;
-}
 
 footer {
   margin: 7em;
 }
 
 
-/* Symbol styling for grouped sections */
-body#about .symbol {
-  margin: 1em 0;
-  font-size: 1em;
-}
+
 
 /* Ensure figure elements don't add extra spacing */
-body#about figure {
-  margin: 0;
+
+  body#about figure {
+  margin: 2em 0;
 }
+
 
 body#about figure img {
   margin-bottom: 0;
+}
+
+body#about section.acknowledgements p {
+  margin: 0 0 2em;  /* bottom margin only */
+}
+
+body#about section.contact iframe {
+  display: block;
+  margin: 2em 0;    /* vertical gap and center on page */
+}
+
+@media (max-width: 600px) {
+  body#about section.contact iframe {
+    width: 100%;
+  }
+   body#about section.font-info img.font-poster {
+    width: 100%;
+  }
+}
+
+body#about section.font-info img.font-poster {
+  display: block;
+  width: 50%;
+  max-width: 100%;
+  margin: 2em 0;
 }
