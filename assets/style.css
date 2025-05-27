@@ -326,6 +326,7 @@ body#about section.font-info img.font-poster {
    FOOTER
    ================================ */
 footer {
-  margin: 7em;
+  margin: 7vh;
+  overflow-y: scroll;
 }
 
