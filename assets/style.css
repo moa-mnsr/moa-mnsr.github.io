@@ -230,7 +230,7 @@ body#about main img {
 body#about figcaption {
   font-size: .9rem;
   margin: 1em 0;
-  padding: 4em;
+  padding: 2em;
   border: 1px solid #101010;
 }
 
@@ -267,6 +267,10 @@ a.in-text-dots {
 
 a.in-text-dots:hover {
      border-bottom: 1.5px solid #101010;
+}
+
+section img.font-poster {
+    width: 50%;
 }
 
 footer {
