@@ -167,6 +167,7 @@ div.svg-container {
   summary {
     font-size: inherit; /* or 1.2rem to match main */
   }
+
 }
 
 @media (min-width: 750px) {
@@ -178,6 +179,8 @@ div.svg-container {
   main section {
     margin: 2em 0;
   }
+
+
 }
 
 @media (min-width: 950px) {
@@ -204,22 +207,38 @@ body#about svg.circle path {
 } 
 
 body#about h1 {
-  margin: 1em 0;
+  font-size: 1.5rem;
+  margin: 1em 0 .5em 0;
+  border-bottom: 1.5px solid #101010;
 }
-body#about main img {
+body#about h2 {
+  font-size: 1rem;
+  
+}
+
+body#about div.flex-box-wrapper {
   max-width: 100%;
+}
+
+body#about main img {
   height: auto;
+  max-width: 100%;
   display: block;
   border: 1.5px solid #101010;
 }
 
 body#about figcaption {
-  font-size: small;
+  font-size: .9rem;
   margin: 1em 0;
-  padding: 1em;
+  padding: 4em;
   border: 1px solid #101010;
 }
 
+div.flex-box-wrapper {
+  display: flex;
+  flex-direction: column;
+
+}
 
 body#about main section {
   margin: 1em 2em;
@@ -227,7 +246,7 @@ body#about main section {
 }
 
 body#about main  p {
-  margin: 1em 0;
+  margin: 1em 0 2em 0;
     font-size: 1rem;
     line-height: 1.5;
 }
@@ -237,8 +256,9 @@ a.in-text {
 }
 
 a.in-text:hover {
-   border-bottom: 1.5px solid whitesmoke;
-   background-color:  whitesmoke;
+  background-color: #101010;
+  color: #768853;
+
 }
 
 a.in-text-dots {
@@ -246,9 +266,7 @@ a.in-text-dots {
 }
 
 a.in-text-dots:hover {
-     border-bottom: 1.5px solid #a6d4ca;
-   background-color:  #a6d4ca;
-
+     border-bottom: 1.5px solid #101010;
 }
 
 footer {
