@@ -1,0 +1,294 @@
+@import url("reset.css");
+@font-face {
+  font-family: 'whoismono';
+  src: url('fonts/whois-mono.eot');
+  src: url('fonts/whois-mono.woff') format('woff'),
+    url('fonts/whois-mono.ttf') format('truetype'),
+    url('fonts/whois-mono.svg#whoismono') format('svg');
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  color: #101010;
+  background-color: #768853;
+  font-family: 'whoismono', monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+
+}
+/* some earlier background-color options: #a69166; /* #9e9f99; #B0B68F; */
+
+/* selection styles */
+
+details::selection {
+  background-color: #101010;
+}
+
+span.block::selection {
+  background-color: #768853;
+}
+
+span.strike::selection {
+  text-decoration: none;
+  background-color: #768853;
+}
+
+/* main content */
+
+main {
+  font-size: 6vw;
+  line-height: 1.5;
+}
+
+
+main section {
+  margin: 2em 2em;
+}
+
+main section div.poem-title{
+  border-bottom: 1px solid #101010;
+  padding: 10px 0;
+
+}
+
+main a {
+  text-decoration: none;
+  color: #101010;
+  padding: 2px;
+}
+
+main div a {
+  padding: 4px 10px;
+  background-color: #a6d4ca;
+  border: 1.5px solid #101010;
+  
+}
+
+main div a:hover {
+  background-color: whitesmoke;
+}
+
+/* earlier consideration for highlight color #7bb4a7;*/
+
+/* text styles */
+
+/* consideration ..
+span.arrow {
+    position: relative;
+    top: 0px;
+*/
+
+
+span.strike {
+  text-decoration: line-through;
+}
+
+span.strike:hover {
+  cursor: crosshair;
+}
+
+span.block {
+  background-color: #101010;
+  padding: 0;
+}
+
+
+/* details and summary */
+
+details {
+  padding: 3px 0;
+}
+
+details summary {
+  cursor: pointer;
+}
+
+summary {
+  font-size: 1.2rem; /* can use any responsive unit */
+}
+
+summary::marker {
+  font-size: 1.2em; /* relative to summary's font size */
+}
+
+
+/* header */
+
+header {
+  padding: 1em 0 0 0;
+}
+
+svg.circle {
+    width: 3.5em;
+    transition: transform .7s ease-in-out;
+    
+}
+
+svg.circle path {
+  fill: #E1D0B8;
+}
+
+
+  svg.circle:hover {
+    transform: rotate(360deg);
+  }
+
+  svg.circle:hover path {
+    fill: #101010;
+  }
+
+
+
+section.toggles {
+  display: flex;
+  justify-content: center;
+  margin: 4em 0 0 0;
+}
+
+div.svg-container {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* responsive for desktop from mobile design */
+@media (min-width: 450px) {
+  main {
+    font-size: 1.2rem;
+    margin: 0 4em;
+    padding: 1em 0;
+  }
+   /* test this: Fixed: summary should scale with main font size */
+  summary {
+    font-size: inherit; /* or 1.2rem to match main */
+  }
+
+}
+
+@media (min-width: 750px) {
+  main {
+    font-size: 1.25rem;
+    margin: 0 10em;
+  }
+
+  main section {
+    margin: 2em 0;
+  }
+
+
+}
+
+@media (min-width: 950px) {
+  
+header {
+  margin: 1em 0;
+}  
+  main {
+    margin: 0 27vw;
+  }
+  main section {
+    padding-bottom: 1em;
+  }
+}
+
+/* about page */
+
+body#about svg.circle path {
+  fill: transparent;
+}
+
+ body#about svg.circle:hover path {
+  fill: #101010;
+} 
+
+body#about h1 {
+  font-size: 1.5rem;
+  margin: 1em 0 .5em 0;
+  border-bottom: 1.5px solid #101010;
+}
+body#about h2 {
+  font-size: 1rem;
+  
+}
+
+body#about div.flex-box-wrapper {
+  max-width: 100%;
+}
+
+body#about main img {
+  height: auto;
+  max-width: 100%;
+  display: block;
+  border: 1.5px solid #101010;
+}
+
+body#about figcaption {
+  font-size: .9rem;
+  margin: 1em 0;
+  padding: 1.5em 2em;
+  border: 1px solid #101010;
+}
+
+div.flex-box-wrapper {
+  display: flex;
+  flex-direction: column;
+
+}
+
+body#about main section {
+  margin: 1em 2em;
+
+}
+
+body#about main  p {
+  margin: 1em 0 2em 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+a.in-text {
+ border-bottom: 1.5px solid #101010;
+}
+
+a.in-text:hover {
+  background-color: #101010;
+  color: #768853;
+
+}
+
+a.in-text-dots {
+ border-bottom: 1.5px dotted #101010;
+}
+
+a.in-text-dots:hover {
+     border-bottom: 1.5px solid #101010;
+}
+
+section img.font-poster {
+    width: 50%;
+}
+
+footer {
+  margin: 7em;
+}
+
+
+/* Symbol styling for grouped sections */
+body#about .symbol {
+  margin: 1em 0;
+  font-size: 1em;
+}
+
+/* Ensure figure elements don't add extra spacing */
+body#about figure {
+  margin: 0;
+}
+
+body#about figure img {
+  margin-bottom: 0;
+}
