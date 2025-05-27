@@ -89,7 +89,7 @@ main section {
 }
 
 main section div.poem-title {
-  border-bottom: 1px solid #101010;
+  border-bottom: 1.5px solid #101010;
   padding: 10px 0;
 }
 
@@ -157,8 +157,6 @@ summary::marker {
   summary {
     font-size: inherit; 
   }
-
-
 }
 
 @media (min-width: 750px) {
@@ -282,7 +280,6 @@ body#about figure {
   margin: 2em 0;
 }
 
-
 body#about figure img {
   margin-bottom: 0;
 }
@@ -313,6 +310,15 @@ body#about section.font-info img.font-poster {
   
   body#about section.font-info img.font-poster {
     width: 100%;
+  }
+}
+
+/* ================================
+   SUBTLE MOBILE FIX FOR CONSISTENCY
+   ================================ */
+@media (min-width: 450px) {
+  body#about main section {
+    margin: 3em 0; /* Remove horizontal margins to match index page container */
   }
 }
 
