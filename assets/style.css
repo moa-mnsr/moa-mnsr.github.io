@@ -50,7 +50,7 @@ main section {
   margin: 2em 2em;
 }
 
-main section div {
+main section div.poem-title{
   border-bottom: 1px solid #101010;
   padding: 10px 0;
 
@@ -230,7 +230,7 @@ body#about main img {
 body#about figcaption {
   font-size: .9rem;
   margin: 1em 0;
-  padding: 2em;
+  padding: 1.5em 2em;
   border: 1px solid #101010;
 }
 
@@ -278,13 +278,17 @@ footer {
 }
 
 
-
-/*
-body#about main {
-  margin: 0 4em;
+/* Symbol styling for grouped sections */
+body#about .symbol {
+  margin: 1em 0;
+  font-size: 1em;
 }
 
-body#about section.top {
-  display: flex;
-  justify-content: space-between;
-}/*
+/* Ensure figure elements don't add extra spacing */
+body#about figure {
+  margin: 0;
+}
+
+body#about figure img {
+  margin-bottom: 0;
+}
