@@ -192,13 +192,19 @@ summary::marker {
 /* ================================
    ABOUT PAGE STYLES
    ================================ */
+body#about main {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
 body#about section.top {
-  margin-bottom: 2em;
+  margin-bottom: 2.5em;
 }
 
 body#about div.symbol {
   font-size: 1.5rem;
-  margin: 2em 0 1em 0;
+  margin: 1.5em 0 1em 0;
+  text-align: center;
 }
 
 body#about svg.circle path {
@@ -244,13 +250,13 @@ div.flex-box-wrapper {
 }
 
 body#about main section {
-  margin: 3em 2em;
+  margin: 2em 2em;
 }
 
 body#about main p {
-  margin: 0 0 2em 0;
+  margin: 0 0 1.5em 0;
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 /* ================================
@@ -285,12 +291,39 @@ body#about figure img {
 }
 
 body#about section.acknowledgements p {
-  margin: 0 0 2em;
+  margin: 0 0 1.5em;
 }
 
-body#about section.contact iframe {
+/* ================================
+   PHONEBOOK BADGE STYLES
+   ================================ */
+.phonebook-badge {
   display: block;
-  margin: 2em 0;
+  text-align: center;
+  margin: 1.5em auto;
+}
+
+.phonebook-badge a {
+  display: inline-block;
+  border: none !important;
+  background-color: transparent !important;
+}
+
+.phonebook-badge a:hover {
+  background-color: transparent !important;
+}
+
+.phonebook-badge img {
+  width: 150px;
+  min-width: 120px;
+  height: auto;
+  border: none !important;
+}
+
+/* Prevent the general img rule from affecting phonebook badge */
+body#about main .phonebook-badge img {
+  border: none !important;
+  max-width: none;
 }
 
 body#about section.font-info img.font-poster {
@@ -311,14 +344,29 @@ body#about section.font-info img.font-poster {
   body#about section.font-info img.font-poster {
     width: 100%;
   }
+  
+  .phonebook-badge img {
+    width: 25vw;
+    min-width: 100px;
+  }
 }
 
-/* ================================
+/*================================
    SUBTLE MOBILE FIX FOR CONSISTENCY
-   ================================ */
+   ================================*/ 
 @media (min-width: 450px) {
   body#about main section {
-    margin: 3em 0; /* Remove horizontal margins to match index page container */
+    margin: 2em 0;
+  }
+} 
+
+@media (min-width: 950px) {
+  body#about main section {
+    margin: 1.5em 0;
+  }
+  
+  .phonebook-badge img {
+    width: 180px;
   }
 }
 
@@ -329,4 +377,3 @@ footer {
   margin: 7vh;
   overflow-y: scroll;
 }
-
